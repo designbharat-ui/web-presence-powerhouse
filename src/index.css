@@ -6,6 +6,54 @@
 
 @layer base {
   :root {
+    --background: 30 20% 98%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 38 90% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 15% 94%;
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 30 10% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 38 85% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 90%;
+    --ring: 38 90% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --steel: 220 15% 40%;
+    --steel-dark: 220 18% 25%;
+    --gold: 38 90% 50%;
+    --gold-light: 40 95% 60%;
+    --gold-dark: 35 85% 38%;
+
+    --sidebar-background: 30 15% 96%;
+    --sidebar-foreground: 220 20% 15%;
+    --sidebar-primary: 38 90% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 15% 92%;
+    --sidebar-accent-foreground: 220 20% 20%;
+    --sidebar-border: 30 15% 88%;
+    --sidebar-ring: 38 90% 50%;
+  }
+
+  .dark {
     --background: 220 15% 8%;
     --foreground: 60 10% 95%;
 
@@ -27,63 +75,15 @@
     --accent: 45 75% 45%;
     --accent-foreground: 220 15% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 220 15% 25%;
     --input: 220 15% 20%;
     --ring: 45 85% 55%;
 
-    --radius: 0.5rem;
-
-    /* Custom colors */
     --steel: 220 10% 70%;
     --steel-dark: 220 12% 35%;
     --gold: 45 85% 55%;
     --gold-light: 45 90% 70%;
     --gold-dark: 40 80% 35%;
-
-    --sidebar-background: 220 15% 10%;
-    --sidebar-foreground: 60 10% 95%;
-    --sidebar-primary: 45 85% 55%;
-    --sidebar-primary-foreground: 220 15% 8%;
-    --sidebar-accent: 220 15% 18%;
-    --sidebar-accent-foreground: 60 10% 95%;
-    --sidebar-border: 220 15% 25%;
-    --sidebar-ring: 45 85% 55%;
-  }
-
-  .light {
-    --background: 60 10% 98%;
-    --foreground: 220 15% 10%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 220 15% 10%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 10%;
-
-    --primary: 45 80% 45%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 220 10% 92%;
-    --secondary-foreground: 220 15% 15%;
-
-    --muted: 220 10% 94%;
-    --muted-foreground: 220 10% 45%;
-
-    --accent: 45 70% 40%;
-    --accent-foreground: 0 0% 100%;
-
-    --border: 220 10% 85%;
-    --input: 220 10% 90%;
-    --ring: 45 80% 45%;
-
-    --steel: 220 10% 45%;
-    --steel-dark: 220 12% 30%;
-    --gold: 45 80% 45%;
-    --gold-light: 45 85% 60%;
-    --gold-dark: 40 75% 30%;
   }
 }
 
@@ -115,23 +115,24 @@
   }
 
   .hero-gradient {
-    background: linear-gradient(180deg, 
-      hsl(var(--background)) 0%, 
-      hsl(220 15% 6%) 50%,
-      hsl(var(--background)) 100%
+    background: linear-gradient(135deg, 
+      hsl(35 100% 95%) 0%, 
+      hsl(30 80% 92%) 30%,
+      hsl(25 60% 90%) 70%,
+      hsl(30 20% 96%) 100%
     );
   }
 
   .section-gradient {
     background: linear-gradient(180deg, 
-      transparent 0%, 
-      hsl(var(--secondary) / 0.5) 50%,
-      transparent 100%
+      hsl(30 20% 98%) 0%, 
+      hsl(30 15% 95%) 50%,
+      hsl(30 20% 98%) 100%
     );
   }
 
   .glass {
-    @apply backdrop-blur-md bg-card/80 border border-border/50;
+    @apply backdrop-blur-md bg-card/90 border border-border/30 shadow-lg shadow-black/5;
   }
 
   .text-steel {
