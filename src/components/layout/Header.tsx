@@ -39,13 +39,13 @@ export function Header() {
       <div className="bg-primary/10 border-b border-border/50 hidden md:block">
         <div className="container flex justify-between items-center py-2 text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+212600000000" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+            <a href="tel:+919711312081" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               <Phone className="h-4 w-4" />
-              <span>+212 600 000 000</span>
+              <span>+91 9711312081</span>
             </a>
-            <a href="mailto:info@onetouch.ma" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+            <a href="mailto:info@onetouchindustrialsolutions.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               <Mail className="h-4 w-4" />
-              <span>info@onetouch.ma</span>
+              <span>info@onetouchindustrialsolutions.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">

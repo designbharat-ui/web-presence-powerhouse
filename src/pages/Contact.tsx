@@ -45,22 +45,22 @@ const Contact = () => {
               <div>
                 <h3 className="font-display text-2xl mb-6">Get in Touch</h3>
                 <div className="space-y-6">
-                  <a href="tel:+212600000000" className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all">
+                  <a href="tel:+919711312081" className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all">
                     <div className="w-12 h-12 rounded-lg bg-gradient-gold flex items-center justify-center shrink-0">
                       <Phone className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-muted-foreground">+212 600 000 000</p>
+                      <p className="text-muted-foreground">+91 9711312081</p>
                     </div>
                   </a>
-                  <a href="mailto:info@onetouch.ma" className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all">
+                  <a href="mailto:info@onetouchindustrialsolutions.com" className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all">
                     <div className="w-12 h-12 rounded-lg bg-gradient-gold flex items-center justify-center shrink-0">
                       <Mail className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">info@onetouch.ma</p>
+                      <p className="text-muted-foreground">info@onetouchindustrialsolutions.com</p>
                     </div>
                   </a>
                   <div className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border">
@@ -69,7 +69,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium">Head Office</p>
-                      <p className="text-muted-foreground">Rabat, Morocco<br />Industrial Zone</p>
+                      <p className="text-muted-foreground">Delhi, India</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border">
@@ -86,7 +86,7 @@ const Contact = () => {
 
               {/* WhatsApp */}
               <a 
-                href="https://wa.me/212600000000" 
+                href="https://wa.me/919711312081" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 p-4 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors"
@@ -127,7 +127,7 @@ const Contact = () => {
                         required 
                         value={formData.phone} 
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+212 XXX XXX XXX"
+                        placeholder="+91 XXX XXX XXXX"
                       />
                     </div>
                     <div>
@@ -190,7 +190,7 @@ const Contact = () => {
         <div className="container">
           <div className="rounded-2xl overflow-hidden border border-border h-96">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212891.99953739648!2d-7.0927458!3d33.9715904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b871f50c5c1%3A0x7ac946ed7408076b!2sRabat%2C%20Morocco!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.95106tried!2d77.0688997!3d28.6436844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -210,7 +210,7 @@ const Contact = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             We're always looking for skilled mechanics, supervisors, and project managers to join our growing team.
           </p>
-          <a href="mailto:careers@onetouch.ma">
+          <a href="mailto:careers@onetouchindustrialsolutions.com">
             <Button variant="outline" size="lg" className="border-primary/50">
               View Open Positions
             </Button>
