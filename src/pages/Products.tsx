@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Link } from "react-router-dom";
 import { ArrowRight, Layers, Grid3X3, Monitor, Cog, HardHat, Wrench, DoorOpen, Settings } from "lucide-react";
@@ -17,13 +18,19 @@ const categories = [
 const Products = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/products"
+        title="Products & Services"
+        description="Complete elevator and escalator solutions - Designer SS 304 sheets, car operating panels, spare parts, multimedia displays, safety equipment, and installation services."
+        keywords="elevator products, escalator parts, SS 304 sheets, car panels, spare parts, safety equipment, installation services, Delhi"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
           <SectionHeader 
             eyebrow="Products & Services" 
             title="Complete Elevator Solutions" 
-            description="From premium materials to expert installation, we deliver comprehensive vertical transportation solutions for Morocco's infrastructure."
+            description="From premium materials to expert installation, we deliver comprehensive vertical transportation solutions for India's infrastructure."
           />
         </div>
       </section>

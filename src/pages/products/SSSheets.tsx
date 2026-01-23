@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -35,6 +36,12 @@ const applications = [
 const SSSheets = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/products/ss-sheets"
+        title="Designer SS 304 Sheets"
+        description="Premium Grade 304 stainless steel sheets for lift cabins, escalator cladding, and architrave finishes. 20+ designer finishes available including gold mirror and custom etched patterns."
+        keywords="SS 304 sheets, stainless steel elevator, lift cabin finish, designer SS sheets, gold mirror finish, escalator cladding, Delhi"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
@@ -115,7 +122,7 @@ const SSSheets = () => {
       {/* Project References */}
       <section className="py-24">
         <div className="container">
-          <SectionHeader eyebrow="Project References" title="Morocco Installations" description="Our SS 304 sheets featured in prestigious projects." />
+          <SectionHeader eyebrow="Project References" title="India Installations" description="Our SS 304 sheets featured in prestigious projects." />
           <div className="grid md:grid-cols-3 gap-8">
             {["Grand Théâtre de Rabat", "Hotel Fermont Rabat", "Hotel Tazi Palace"].map((project) => (
               <div key={project} className="p-6 rounded-2xl bg-card border border-border text-center">

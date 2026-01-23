@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -27,13 +28,19 @@ const tools = [
 const Safety = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/products/safety"
+        title="Safety Equipment & Tools"
+        description="Complete range of PPE and industrial tools for elevator and escalator work. Safety helmets, harness, safety shoes, and specialized tools meeting EN81 standards."
+        keywords="safety equipment, PPE, elevator safety, harness, safety helmet, industrial tools, elevator tools"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
           <SectionHeader 
             eyebrow="Safety Equipment & Tools" 
             title="Safety First, Always" 
-            description="Complete range of PPE and industrial tools meeting EN81 and Moroccan safety standards."
+            description="Complete range of PPE and industrial tools meeting EN81 and Indian safety standards."
           />
         </div>
       </section>
@@ -88,7 +95,7 @@ const Safety = () => {
                 All our safety equipment meets international and local safety standards for elevator and escalator work.
               </p>
               <ul className="space-y-3">
-                {["EN81 European Standards", "Moroccan Safety Regulations", "ISO Certified Products", "CE Marking"].map((item) => (
+                {["EN81 European Standards", "Indian Safety Regulations", "ISO Certified Products", "CE Marking"].map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-primary" />
                     <span>{item}</span>

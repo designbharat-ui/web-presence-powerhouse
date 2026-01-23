@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,6 +24,12 @@ const brands = ["OTIS", "KONE", "Schindler", "ThyssenKrupp", "Mitsubishi", "Hita
 const SpareParts = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/products/spare-parts"
+        title="Elevator & Escalator Spare Parts"
+        description="Complete inventory of genuine and compatible spare parts for all major elevator and escalator brands. OTIS, KONE, Schindler, ThyssenKrupp, Mitsubishi, Hitachi."
+        keywords="elevator spare parts, escalator spare parts, OTIS parts, KONE parts, Schindler parts, lift parts India, VVVF drives, elevator batteries"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">

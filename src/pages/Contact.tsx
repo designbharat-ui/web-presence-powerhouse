@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,6 +26,12 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/contact"
+        title="Contact Us"
+        description="Contact One Touch Industrial Solutions for elevator and escalator solutions. Get a free consultation and quote. Located in Delhi, India."
+        keywords="contact elevator company, elevator quote, escalator installation quote, Delhi elevator company, industrial solutions contact"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">

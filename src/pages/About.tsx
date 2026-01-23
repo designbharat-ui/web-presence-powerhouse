@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -22,6 +23,12 @@ const team = [
 const About = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/about"
+        title="About Us"
+        description="One Touch Industrial Solutions - Building trust since 2017. ISO-certified company specializing in turnkey civil works, project management, and trading of industrial solutions in Delhi, India."
+        keywords="about one touch, elevator company Delhi, industrial solutions India, ISO certified, elevator installation company"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
@@ -67,7 +74,7 @@ const About = () => {
             <div className="p-8 rounded-2xl bg-card border border-border">
               <h3 className="font-display text-3xl mb-4 text-primary">Our Vision</h3>
               <p className="text-muted-foreground text-lg">
-                To be the leading provider of vertical transportation solutions in Morocco, recognized for our commitment to excellence, 
+                To be the leading provider of vertical transportation solutions in India, recognized for our commitment to excellence, 
                 innovation, and long-term partnerships with clients across the region.
               </p>
             </div>

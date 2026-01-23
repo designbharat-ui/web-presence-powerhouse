@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -26,6 +27,12 @@ const features = [
 const Panels = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/products/panels"
+        title="Car Operative Panels"
+        description="Premium car operating panels with touch and push button options. Custom engraving, braille integration, and configurations for 2 to 64 floors."
+        keywords="car operating panel, elevator panel, touch button panel, push button panel, braille panel, lift panel Delhi"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">

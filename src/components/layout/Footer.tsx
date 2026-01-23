@@ -61,7 +61,7 @@ export function Footer() {
             </Link>
             <p className="text-muted-foreground mb-6">
               ISO 9001:2015 certified company specializing in elevator and escalator solutions. 
-              21 years of expertise serving Morocco's vertical transportation industry.
+              21 years of expertise serving India's vertical transportation industry.
             </p>
             <div className="flex gap-4">
               <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors">

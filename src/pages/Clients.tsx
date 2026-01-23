@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -25,13 +26,19 @@ const partnerTiers = [
 const Clients = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/clients"
+        title="Our Clients & Partners"
+        description="Working with leading elevator manufacturers and real estate developers across India. View our trusted partnerships and client testimonials."
+        keywords="elevator clients India, escalator partners, OTIS, KONE, Schindler, ThyssenKrupp, real estate developers"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
           <SectionHeader 
             eyebrow="Our Clients" 
             title="Trusted Partnerships" 
-            description="Working with leading elevator manufacturers and real estate developers across Morocco and beyond."
+            description="Working with leading elevator manufacturers and real estate developers across India and beyond."
           />
         </div>
       </section>

@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -22,6 +23,12 @@ const projects = [
 const Installation = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/services/installation"
+        title="Installation Services"
+        description="Expert elevator and escalator installation with 21 years of experience and 3000+ units installed. From standard residential to high-speed 6 mps infrastructure projects."
+        keywords="elevator installation, escalator installation, lift installation Delhi, high-speed elevator, infrastructure project, commercial elevator installation"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
