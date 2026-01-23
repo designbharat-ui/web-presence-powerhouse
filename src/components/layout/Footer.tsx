@@ -115,20 +115,20 @@ export function Footer() {
             <h3 className="font-display text-lg mb-6 text-primary">Contact</h3>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+212600000000" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <a href="tel:+919711312081" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors">
                   <Phone className="h-5 w-5 shrink-0 mt-0.5" />
-                  <span>+212 600 000 000</span>
+                  <span>+91 9711312081</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:info@onetouch.ma" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:info@onetouchindustrialsolutions.com" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors">
                   <Mail className="h-5 w-5 shrink-0 mt-0.5" />
-                  <span>info@onetouch.ma</span>
+                  <span>info@onetouchindustrialsolutions.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="h-5 w-5 shrink-0 mt-0.5" />
-                <span>Rabat, Morocco<br />Industrial Zone</span>
+                <span>Delhi, India</span>
               </li>
             </ul>
           </div>
