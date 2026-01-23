@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -27,6 +28,12 @@ const useCases = [
 const Displays = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/products/displays"
+        title="Multimedia Displays"
+        description="In-car digital screens and multimedia displays for elevators. Floor indicators, advertising screens with remote content management. 7 to 21 inch LCD/LED screens."
+        keywords="elevator display, lift display, multimedia display, floor indicator, elevator advertising screen, digital signage"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">

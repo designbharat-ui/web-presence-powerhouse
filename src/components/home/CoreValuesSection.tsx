@@ -5,7 +5,7 @@ const values = [
   {
     icon: Award,
     title: "21 Years of Expertise",
-    description: "Two decades of experience in elevator and escalator solutions across Morocco.",
+    description: "Two decades of experience in elevator and escalator solutions across India.",
   },
   {
     icon: Shield,
@@ -31,7 +31,7 @@ export function CoreValuesSection() {
         <SectionHeader
           eyebrow="Why Choose Us"
           title="Excellence in Every Lift"
-          description="Built on trust, transparency, and technical excellence to serve Morocco's vertical transportation needs."
+          description="Built on trust, transparency, and technical excellence to serve India's vertical transportation needs."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

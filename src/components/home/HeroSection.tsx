@@ -26,7 +26,7 @@ export function HeroSection() {
             </div>
             
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight mb-6">
-              Elevating Morocco's{" "}
+              Elevating India's{" "}
               <span className="text-gradient">Infrastructure</span>{" "}
               Since 2005
             </h1>

@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -40,13 +41,19 @@ const moreProjects = [
 const Projects = () => {
   return (
     <Layout>
+      <SEOHead 
+        canonicalUrl="/projects"
+        title="Our Projects"
+        description="View our portfolio of successful elevator and escalator installations across India's prestigious buildings and infrastructure projects."
+        keywords="elevator projects India, escalator installation, lift installation projects, commercial elevator, residential elevator"
+      />
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
           <SectionHeader 
             eyebrow="Our Projects" 
             title="Portfolio of Excellence" 
-            description="Showcasing our expertise across Morocco's most prestigious buildings and infrastructure projects."
+            description="Showcasing our expertise across India's most prestigious buildings and infrastructure projects."
           />
         </div>
       </section>
@@ -81,7 +88,7 @@ const Projects = () => {
                     </div>
                     <div className="text-center p-3 rounded-lg bg-card border border-border">
                       <MapPin className="h-5 w-5 text-primary mx-auto mb-1" />
-                      <div className="font-display text-lg">Morocco</div>
+                      <div className="font-display text-lg">India</div>
                       <p className="text-xs text-muted-foreground">Location</p>
                     </div>
                   </div>
@@ -129,7 +136,7 @@ const Projects = () => {
         <div className="container text-center">
           <h2 className="font-display text-4xl mb-6">Start Your Project With Us</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join our portfolio of successful installations across Morocco.
+            Join our portfolio of successful installations across India.
           </p>
           <Link to="/contact">
             <Button size="lg" className="bg-gradient-gold text-primary-foreground">
