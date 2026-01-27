@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Link } from "react-router-dom";
-import { ArrowRight, Layers, Grid3X3, Monitor, Cog, HardHat, Wrench, DoorOpen, Settings } from "lucide-react";
+import { ArrowRight, Layers, Grid3X3, Monitor, Cog, HardHat, Wrench, DoorOpen, Settings, Building2, Leaf, FlaskConical } from "lucide-react";
 
 const categories = [
   { icon: Layers, title: "Designer SS 304 Sheets", description: "Premium stainless steel for lift cabins, escalator cladding, and architrave finishes.", href: "/products/ss-sheets", image: "/images/ss-sheet-1.jpg" },
@@ -13,6 +13,9 @@ const categories = [
   { icon: HardHat, title: "Safety Equipment & PPE", description: "Full body harness, hard hats, safety shoes, and specialized PPE.", href: "/products/safety", image: "/images/safety-1.jpg" },
   { icon: Wrench, title: "Industrial Tools", description: "Specialized elevator tools and testing equipment.", href: "/products/tools", image: "/images/tool-1.jpg" },
   { icon: Settings, title: "Installation Services", description: "Expert installation with 30+ mechanics and project management.", href: "/services/installation", image: "/images/cabin-5.jpg" },
+  { icon: Building2, title: "Building & Cladding", description: "ACP, HPL, glass glazing, and tensile structure solutions.", href: "/services/building-systems", image: "/images/building-systems.jpg" },
+  { icon: Leaf, title: "Vertical Gardens", description: "Transform walls into beautiful living gardens for indoor/outdoor spaces.", href: "/services/vertical-gardens", image: "/images/vertical-transportation.jpg" },
+  { icon: FlaskConical, title: "Scientific & Agriculture", description: "Green houses, growth facilities, and prefabricated laboratories.", href: "/services/scientific-agriculture", image: "/images/scientific-agriculture.jpg" },
 ];
 
 const Products = () => {
