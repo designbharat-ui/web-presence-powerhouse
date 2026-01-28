@@ -5,12 +5,12 @@ const values = [
   {
     icon: Award,
     title: "21 Years of Expertise",
-    description: "Two decades of experience in elevator and escalator solutions across India.",
+    description: "Two decades of experience in industrial solutions - elevators, building systems, and infrastructure.",
   },
   {
     icon: Shield,
-    title: "3000+ Installations",
-    description: "Successfully completed thousands of elevator installations including high-speed systems.",
+    title: "500+ Projects Delivered",
+    description: "Successfully completed projects across verticals including elevators, ACP, glazing, and gardens.",
   },
   {
     icon: Lightbulb,
@@ -30,8 +30,8 @@ export function CoreValuesSection() {
       <div className="container">
         <SectionHeader
           eyebrow="Why Choose Us"
-          title="Excellence in Every Lift"
-          description="Built on trust, transparency, and technical excellence to serve India's vertical transportation needs."
+          title="Excellence in Every Project"
+          description="Built on trust, transparency, and technical excellence to serve India's industrial and infrastructure needs."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -41,7 +41,7 @@ export function CoreValuesSection() {
               className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-gradient-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <value.icon className="h-7 w-7 text-primary-foreground" />
               </div>
               <h3 className="font-display text-xl mb-3">{value.title}</h3>

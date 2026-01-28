@@ -1,15 +1,15 @@
 import { StatCounter } from "@/components/ui/stat-counter";
 
 const stats = [
-  { value: 30, suffix: "+", label: "Expert Mechanics" },
-  { value: 6, suffix: " mps", label: "High-Speed Elevators" },
+  { value: 500, suffix: "+", label: "Projects Completed" },
+  { value: 50, suffix: "+", label: "Expert Professionals" },
   { value: 21, suffix: "+", label: "Years Experience" },
-  { value: 3000, suffix: "+", label: "Units Installed" },
+  { value: 100, suffix: "+", label: "Happy Clients" },
 ];
 
 export function StatsSection() {
   return (
-    <section className="py-20 bg-gradient-gold">
+    <section className="py-20 bg-gradient-navy">
       <div className="container">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
