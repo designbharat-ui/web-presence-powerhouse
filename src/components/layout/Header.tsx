@@ -41,20 +41,20 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top bar */}
-      <div className="bg-primary/10 border-b border-border/50 hidden md:block">
+      <div className="bg-primary text-primary-foreground hidden md:block">
         <div className="container flex justify-between items-center py-2 text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+919711312081" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+            <a href="tel:+919711312081" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               <Phone className="h-4 w-4" />
               <span>+91 9711312081</span>
             </a>
-            <a href="mailto:info@onetouchindustrialsolutions.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+            <a href="mailto:info@onetouchindustrialsolutions.com" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               <Mail className="h-4 w-4" />
               <span>info@onetouchindustrialsolutions.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-muted-foreground">ISO 9001:2015 Certified</span>
+            <span className="text-primary-foreground/90 font-medium">ISO 9001:2015 Certified | Industrial Solutions Provider</span>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ export function Header() {
         <div className="container flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="h-12 w-12 bg-gradient-gold rounded-lg flex items-center justify-center">
+            <div className="h-12 w-12 bg-primary rounded-lg flex items-center justify-center">
               <span className="font-display text-2xl text-primary-foreground">OT</span>
             </div>
             <div className="hidden sm:block">
@@ -124,7 +124,7 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <Link to="/contact">
-              <Button className="bg-gradient-gold text-primary-foreground hover:opacity-90 font-semibold">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
                 Request Quote
               </Button>
             </Link>
@@ -176,7 +176,7 @@ export function Header() {
               ))}
               <div className="pt-4">
                 <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  <Button className="w-full bg-gradient-gold text-primary-foreground">
+                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                     Request Quote
                   </Button>
                 </Link>

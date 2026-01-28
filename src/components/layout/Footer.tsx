@@ -22,22 +22,22 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-secondary/30 border-t border-border">
+    <footer className="bg-footer text-white">
       {/* Newsletter section */}
-      <div className="border-b border-border">
+      <div className="border-b border-white/10">
         <div className="container py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="font-display text-2xl mb-2">Stay Updated</h3>
-              <p className="text-muted-foreground">Subscribe to our newsletter for latest products and industry news.</p>
+              <h3 className="font-display text-2xl mb-2 text-white">Stay Updated</h3>
+              <p className="text-white/70">Subscribe to our newsletter for latest products and industry news.</p>
             </div>
             <div className="flex gap-2 w-full md:w-auto">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="md:w-80 bg-background"
+                className="md:w-80 bg-white/10 border-white/20 text-white placeholder:text-white/50"
               />
-              <Button className="bg-gradient-gold text-primary-foreground shrink-0">
+              <Button className="bg-white text-primary hover:bg-white/90 shrink-0">
                 Subscribe
               </Button>
             </div>
@@ -51,26 +51,26 @@ export function Footer() {
           {/* Company info */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="h-12 w-12 bg-gradient-gold rounded-lg flex items-center justify-center">
-                <span className="font-display text-2xl text-primary-foreground">OT</span>
+              <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center">
+                <span className="font-display text-2xl text-primary">OT</span>
               </div>
               <div>
-                <h2 className="font-display text-xl">OneTouch</h2>
-                <p className="text-xs text-muted-foreground">Industrial Solutions</p>
+                <h2 className="font-display text-xl text-white">OneTouch</h2>
+                <p className="text-xs text-white/60">Industrial Solutions</p>
               </div>
             </Link>
-            <p className="text-muted-foreground mb-6">
-              ISO 9001:2015 certified company specializing in elevator and escalator solutions. 
-              21 years of expertise serving India's vertical transportation industry.
+            <p className="text-white/70 mb-6">
+              ISO 9001:2015 certified company specializing in industrial solutions - elevators, building systems, and infrastructure projects. 
+              Serving India with excellence since 2005.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="#" className="p-2 rounded-lg bg-white/10 hover:bg-white hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="#" className="p-2 rounded-lg bg-white/10 hover:bg-white hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="#" className="p-2 rounded-lg bg-white/10 hover:bg-white hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -78,13 +78,13 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="font-display text-lg mb-6 text-primary">Products</h3>
+            <h3 className="font-display text-lg mb-6 text-white">Products</h3>
             <ul className="space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-white/70 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -95,13 +95,13 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-display text-lg mb-6 text-primary">Company</h3>
+            <h3 className="font-display text-lg mb-6 text-white">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-white/70 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -112,21 +112,21 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-display text-lg mb-6 text-primary">Contact</h3>
+            <h3 className="font-display text-lg mb-6 text-white">Contact</h3>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+919711312081" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <a href="tel:+919711312081" className="flex items-start gap-3 text-white/70 hover:text-white transition-colors">
                   <Phone className="h-5 w-5 shrink-0 mt-0.5" />
                   <span>+91 9711312081</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:info@onetouchindustrialsolutions.com" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:info@onetouchindustrialsolutions.com" className="flex items-start gap-3 text-white/70 hover:text-white transition-colors">
                   <Mail className="h-5 w-5 shrink-0 mt-0.5" />
                   <span>info@onetouchindustrialsolutions.com</span>
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-muted-foreground">
+              <li className="flex items-start gap-3 text-white/70">
                 <MapPin className="h-5 w-5 shrink-0 mt-0.5" />
                 <span>Delhi, India</span>
               </li>
@@ -136,12 +136,12 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-border">
-        <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+      <div className="border-t border-white/10">
+        <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
           <p>© 2024 OneTouch Industrial & Power Solutions. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

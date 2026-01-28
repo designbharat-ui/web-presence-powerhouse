@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 210 25% 97%;
+    --background: 0 0% 100%;
     --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
@@ -18,41 +18,39 @@
     --primary: 215 70% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 93%;
+    --secondary: 210 20% 96%;
     --secondary-foreground: 215 25% 20%;
 
-    --muted: 210 15% 90%;
+    --muted: 210 15% 93%;
     --muted-foreground: 215 15% 45%;
 
-    --accent: 38 75% 50%;
+    --accent: 215 60% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 20% 85%;
-    --input: 210 20% 88%;
+    --border: 210 20% 88%;
+    --input: 210 20% 90%;
     --ring: 215 70% 35%;
 
     --radius: 0.5rem;
 
-    /* Custom colors - Professional Navy & Gold */
+    /* Custom colors - Professional Navy Blue */
     --steel: 215 25% 35%;
     --steel-dark: 215 30% 20%;
-    --gold: 38 75% 50%;
-    --gold-light: 40 80% 60%;
-    --gold-dark: 35 70% 40%;
     --navy: 215 70% 35%;
     --navy-light: 215 60% 45%;
     --navy-dark: 215 80% 25%;
+    --navy-darker: 215 85% 12%;
 
-    --sidebar-background: 210 20% 96%;
+    --sidebar-background: 210 20% 98%;
     --sidebar-foreground: 215 25% 15%;
     --sidebar-primary: 215 70% 35%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 20% 92%;
+    --sidebar-accent: 210 20% 94%;
     --sidebar-accent-foreground: 215 25% 20%;
-    --sidebar-border: 210 20% 85%;
+    --sidebar-border: 210 20% 88%;
     --sidebar-ring: 215 70% 35%;
   }
 
@@ -66,8 +64,8 @@
     --popover: 215 28% 12%;
     --popover-foreground: 210 15% 95%;
 
-    --primary: 38 75% 55%;
-    --primary-foreground: 215 30% 8%;
+    --primary: 215 60% 50%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 215 25% 18%;
     --secondary-foreground: 210 15% 95%;
@@ -75,21 +73,19 @@
     --muted: 215 25% 20%;
     --muted-foreground: 215 15% 60%;
 
-    --accent: 215 60% 45%;
+    --accent: 215 55% 55%;
     --accent-foreground: 0 0% 100%;
 
     --border: 215 25% 25%;
     --input: 215 25% 20%;
-    --ring: 38 75% 55%;
+    --ring: 215 60% 50%;
 
     --steel: 215 15% 70%;
     --steel-dark: 215 18% 35%;
-    --gold: 38 75% 55%;
-    --gold-light: 40 80% 70%;
-    --gold-dark: 35 70% 35%;
     --navy: 215 60% 45%;
     --navy-light: 215 55% 55%;
     --navy-dark: 215 70% 30%;
+    --navy-darker: 215 85% 15%;
   }
 }
 
@@ -112,8 +108,8 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
   }
 
-  .bg-gradient-gold {
-    background: linear-gradient(135deg, hsl(var(--gold-dark)) 0%, hsl(var(--gold)) 50%, hsl(var(--gold-light)) 100%);
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--navy-dark)) 0%, hsl(var(--navy)) 50%, hsl(var(--navy-light)) 100%);
   }
 
   .bg-gradient-steel {
@@ -122,6 +118,10 @@
 
   .bg-gradient-navy {
     background: linear-gradient(135deg, hsl(var(--navy-dark)) 0%, hsl(var(--navy)) 50%, hsl(var(--navy-light)) 100%);
+  }
+
+  .bg-footer {
+    background-color: hsl(var(--navy-darker));
   }
 
   .hero-gradient {
@@ -149,20 +149,20 @@
     color: hsl(var(--steel));
   }
 
-  .text-gold {
-    color: hsl(var(--gold));
+  .text-navy {
+    color: hsl(var(--navy));
   }
 
   .bg-steel {
     background-color: hsl(var(--steel));
   }
 
-  .bg-gold {
-    background-color: hsl(var(--gold));
+  .bg-navy {
+    background-color: hsl(var(--navy));
   }
 
-  .border-gold {
-    border-color: hsl(var(--gold));
+  .border-navy {
+    border-color: hsl(var(--navy));
   }
 
   .border-steel {

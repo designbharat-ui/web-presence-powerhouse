@@ -21,20 +21,20 @@ export function CTASection() {
           <div className="relative py-20 px-8 md:px-16">
             <div className="max-w-2xl">
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl mb-6">
-                Ready to Elevate Your Project?
+                Ready to Start Your Project?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
                 Get a free consultation and quote from our expert team. 
-                We'll help you find the perfect solution for your vertical transportation needs.
+                We'll help you find the perfect solution for your industrial and infrastructure needs.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-gold text-primary-foreground hover:opacity-90">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                     Request Free Quote
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <a href="tel:+212600000000">
+                <a href="tel:+919711312081">
                   <Button size="lg" variant="outline" className="border-primary/50">
                     <Phone className="mr-2 h-5 w-5" />
                     Call Us Now

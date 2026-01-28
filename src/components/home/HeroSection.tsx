@@ -26,19 +26,19 @@ export function HeroSection() {
             </div>
             
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight mb-6">
-              Elevating India's{" "}
-              <span className="text-gradient">Infrastructure</span>{" "}
+              Complete{" "}
+              <span className="text-gradient">Industrial Solutions</span>{" "}
               Since 2005
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-xl">
-              Premium elevator and escalator solutions with 21 years of expertise. 
-              From designer stainless steel to complete installation services.
+              Your trusted partner for elevators, building systems, ACP panels, glazing, 
+              tensile structures, vertical gardens, and infrastructure projects across India.
             </p>
             
             <div className="flex flex-wrap gap-4">
               <Link to="/projects">
-                <Button size="lg" className="bg-gradient-gold text-primary-foreground hover:opacity-90 text-lg px-8">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8">
                   View Our Projects
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -57,12 +57,12 @@ export function HeroSection() {
                 <p className="text-sm text-muted-foreground">Years Experience</p>
               </div>
               <div>
-                <div className="font-display text-4xl text-primary">3000+</div>
-                <p className="text-sm text-muted-foreground">Units Installed</p>
+                <div className="font-display text-4xl text-primary">500+</div>
+                <p className="text-sm text-muted-foreground">Projects Delivered</p>
               </div>
               <div>
-                <div className="font-display text-4xl text-primary">30+</div>
-                <p className="text-sm text-muted-foreground">Expert Mechanics</p>
+                <div className="font-display text-4xl text-primary">100+</div>
+                <p className="text-sm text-muted-foreground">Happy Clients</p>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ export function HeroSection() {
             {/* Floating badge */}
             <div className="absolute -bottom-6 -left-6 glass rounded-xl p-6 shadow-xl">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-gradient-gold flex items-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center">
                   <Play className="h-6 w-6 text-primary-foreground fill-current" />
                 </div>
                 <div>
