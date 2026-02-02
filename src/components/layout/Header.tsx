@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { LanguageSelector } from "./LanguageSelector";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -55,6 +56,7 @@ export function Header() {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-primary-foreground/90 font-medium">ISO 9001:2015 Certified | Industrial Solutions Provider</span>
+            <LanguageSelector />
           </div>
         </div>
       </div>
