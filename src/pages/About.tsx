@@ -42,10 +42,10 @@ const About = () => {
               </p>
               <div className="flex gap-4">
                 <Link to="/projects">
-                  <Button className="bg-gradient-gold text-primary-foreground">View Our Projects</Button>
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">View Our Projects</Button>
                 </Link>
                 <Link to="/contact">
-                  <Button variant="outline" className="border-primary/50">Contact Us</Button>
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Contact Us</Button>
                 </Link>
               </div>
             </div>
@@ -105,7 +105,7 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member) => (
               <div key={member.role} className="text-center p-8 rounded-2xl bg-card border border-border">
-                <div className="w-20 h-20 rounded-full bg-gradient-gold mx-auto mb-4 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center">
                   <span className="font-display text-3xl text-primary-foreground">{member.count}</span>
                 </div>
                 <h4 className="font-display text-2xl mb-2">{member.role}</h4>
@@ -151,7 +151,7 @@ const About = () => {
             Let's discuss how we can help elevate your next project.
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-gradient-gold text-primary-foreground">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
