@@ -53,7 +53,7 @@ const Products = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <category.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <h3 className="font-display text-xl mb-2 group-hover:text-primary transition-colors">{category.title}</h3>

@@ -6,22 +6,71 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Send, RotateCcw } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  company?: string;
+  message?: string;
+}
 
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", company: "", projectType: "", productCategory: "", message: "",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = "Full Name is required";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email";
+    }
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    }
+    if (!formData.company.trim()) {
+      newErrors.company = "Company name is required";
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = "Project details are required";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      toast({
+        title: "Please fill all required fields",
+        description: "Fields marked with * are mandatory.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     toast({
       title: "Quote Request Submitted!",
       description: "Our team will contact you within 24 hours.",
     });
+    handleClear();
+  };
+
+  const handleClear = () => {
     setFormData({ name: "", email: "", phone: "", company: "", projectType: "", productCategory: "", message: "" });
+    setErrors({});
   };
 
   return (
@@ -53,7 +102,7 @@ const Contact = () => {
                 <h3 className="font-display text-2xl mb-6">Get in Touch</h3>
                 <div className="space-y-6">
                   <a href="tel:+919711312081" className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-gold flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center shrink-0">
                       <Phone className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
@@ -62,7 +111,7 @@ const Contact = () => {
                     </div>
                   </a>
                   <a href="mailto:info@onetouchindustrialsolutions.com" className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-gold flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center shrink-0">
                       <Mail className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
@@ -71,7 +120,7 @@ const Contact = () => {
                     </div>
                   </a>
                   <div className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-gold flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center shrink-0">
                       <MapPin className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
@@ -80,7 +129,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-gold flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center shrink-0">
                       <Clock className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
@@ -110,40 +159,65 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium mb-2">Full Name *</label>
+                      <label className="block text-sm font-medium mb-2">
+                        Full Name <span className="text-red-500">*</span>
+                      </label>
                       <Input 
-                        required 
                         value={formData.name} 
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        onChange={(e) => {
+                          setFormData({ ...formData, name: e.target.value });
+                          if (errors.name) setErrors({ ...errors, name: undefined });
+                        }}
                         placeholder="Your name"
+                        className={errors.name ? "border-red-500" : ""}
                       />
+                      {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Email *</label>
+                      <label className="block text-sm font-medium mb-2">
+                        Email <span className="text-red-500">*</span>
+                      </label>
                       <Input 
                         type="email" 
-                        required 
                         value={formData.email} 
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onChange={(e) => {
+                          setFormData({ ...formData, email: e.target.value });
+                          if (errors.email) setErrors({ ...errors, email: undefined });
+                        }}
                         placeholder="your@email.com"
+                        className={errors.email ? "border-red-500" : ""}
                       />
+                      {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Phone *</label>
+                      <label className="block text-sm font-medium mb-2">
+                        Phone <span className="text-red-500">*</span>
+                      </label>
                       <Input 
-                        required 
                         value={formData.phone} 
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        onChange={(e) => {
+                          setFormData({ ...formData, phone: e.target.value });
+                          if (errors.phone) setErrors({ ...errors, phone: undefined });
+                        }}
                         placeholder="+91 XXX XXX XXXX"
+                        className={errors.phone ? "border-red-500" : ""}
                       />
+                      {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Company</label>
+                      <label className="block text-sm font-medium mb-2">
+                        Company <span className="text-red-500">*</span>
+                      </label>
                       <Input 
                         value={formData.company} 
-                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        onChange={(e) => {
+                          setFormData({ ...formData, company: e.target.value });
+                          if (errors.company) setErrors({ ...errors, company: undefined });
+                        }}
                         placeholder="Company name"
+                        className={errors.company ? "border-red-500" : ""}
                       />
+                      {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company}</p>}
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">Project Type</label>
@@ -151,10 +225,14 @@ const Contact = () => {
                         <SelectTrigger><SelectValue placeholder="Select project type" /></SelectTrigger>
                         <SelectContent>
                           <SelectItem value="new-installation">New Installation</SelectItem>
-                          <SelectItem value="modernization">Modernization</SelectItem>
-                          <SelectItem value="maintenance">Maintenance Contract</SelectItem>
-                          <SelectItem value="spare-parts">Spare Parts Order</SelectItem>
-                          <SelectItem value="consultation">Consultation</SelectItem>
+                          <SelectItem value="modernization">Modernization & Upgrades</SelectItem>
+                          <SelectItem value="maintenance">AMC / Maintenance Contract</SelectItem>
+                          <SelectItem value="spare-parts">Spare Parts Supply</SelectItem>
+                          <SelectItem value="building-cladding">Building & Cladding</SelectItem>
+                          <SelectItem value="vertical-gardens">Vertical Gardens</SelectItem>
+                          <SelectItem value="tensile-structures">Tensile Structures</SelectItem>
+                          <SelectItem value="consultation">Technical Consultation</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -163,28 +241,46 @@ const Contact = () => {
                       <Select value={formData.productCategory} onValueChange={(value) => setFormData({ ...formData, productCategory: value })}>
                         <SelectTrigger><SelectValue placeholder="Select category" /></SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="ss-sheets">SS 304 Sheets</SelectItem>
-                          <SelectItem value="panels">Car Operative Panels</SelectItem>
-                          <SelectItem value="spare-parts">Spare Parts</SelectItem>
+                          <SelectItem value="ss-sheets">Designer SS 304 Sheets</SelectItem>
+                          <SelectItem value="panels">Car Operating Panels</SelectItem>
+                          <SelectItem value="spare-parts">Elevator & Escalator Spare Parts</SelectItem>
                           <SelectItem value="displays">Multimedia Displays</SelectItem>
-                          <SelectItem value="safety">Safety Equipment</SelectItem>
+                          <SelectItem value="entrances">Entrances & Signage</SelectItem>
+                          <SelectItem value="safety">Safety Equipment & PPE</SelectItem>
+                          <SelectItem value="tools">Industrial Tools</SelectItem>
                           <SelectItem value="installation">Installation Services</SelectItem>
+                          <SelectItem value="acp-hpl">ACP/HPL Cladding</SelectItem>
+                          <SelectItem value="glass-glazing">Glass & Glazing</SelectItem>
+                          <SelectItem value="vertical-gardens">Vertical Gardens</SelectItem>
+                          <SelectItem value="scientific-agriculture">Scientific & Agriculture</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Project Details</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Project Details <span className="text-red-500">*</span>
+                    </label>
                     <Textarea 
                       value={formData.message} 
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) => {
+                        setFormData({ ...formData, message: e.target.value });
+                        if (errors.message) setErrors({ ...errors, message: undefined });
+                      }}
                       placeholder="Tell us about your project requirements, quantities, timeline, etc."
                       rows={5}
+                      className={errors.message ? "border-red-500" : ""}
                     />
+                    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                   </div>
-                  <Button type="submit" size="lg" className="w-full bg-gradient-gold text-primary-foreground">
-                    <Send className="mr-2 h-5 w-5" /> Submit Quote Request
-                  </Button>
+                  <div className="flex gap-4">
+                    <Button type="submit" size="lg" className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
+                      <Send className="mr-2 h-5 w-5" /> Submit Quote Request
+                    </Button>
+                    <Button type="button" size="lg" variant="outline" onClick={handleClear} className="bg-primary text-primary-foreground hover:bg-primary/90">
+                      <RotateCcw className="mr-2 h-5 w-5" /> Clear
+                    </Button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -218,7 +314,7 @@ const Contact = () => {
             We're always looking for skilled mechanics, supervisors, and project managers to join our growing team.
           </p>
           <a href="mailto:careers@onetouchindustrialsolutions.com">
-            <Button variant="outline" size="lg" className="border-primary/50">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               View Open Positions
             </Button>
           </a>
