@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, RotateCcw } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 interface FormErrors {
   name?: string;
@@ -85,8 +84,7 @@ const Contact = () => {
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
-          <Breadcrumbs />
-          <SectionHeader 
+          <SectionHeader
             eyebrow="Contact Us" 
             title="Let's Discuss Your Project" 
             description="Get a free consultation and quote from our expert team. We're here to help elevate your next project."

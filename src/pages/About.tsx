@@ -4,7 +4,6 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Award, Shield, Users, Target, Lightbulb, Handshake, CheckCircle, ArrowRight } from "lucide-react";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const coreValues = [
   { icon: Shield, title: "Trust & Transparency", description: "We build lasting relationships through open communication and honest dealings." },
@@ -33,7 +32,6 @@ const About = () => {
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
-          <Breadcrumbs />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">About Us</span>
