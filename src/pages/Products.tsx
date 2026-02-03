@@ -3,6 +3,7 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Link } from "react-router-dom";
 import { ArrowRight, Layers, Grid3X3, Monitor, Cog, HardHat, Wrench, DoorOpen, Settings, Building2, Leaf, FlaskConical } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const categories = [
   { icon: Layers, title: "Designer SS 304 Sheets", description: "Premium stainless steel for lift cabins, escalator cladding, and architrave finishes.", href: "/products/ss-sheets", image: "/images/ss-sheet-1.jpg" },
@@ -30,6 +31,7 @@ const Products = () => {
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
+          <Breadcrumbs />
           <SectionHeader 
             eyebrow="Products & Services" 
             title="Complete Elevator Solutions" 

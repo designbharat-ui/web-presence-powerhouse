@@ -65,14 +65,12 @@ export function Header() {
       <nav className="glass border-b border-border/50">
         <div className="container flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="h-12 w-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="font-display text-2xl text-primary-foreground">OT</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="font-display text-xl tracking-wide text-foreground">OneTouch</h1>
-              <p className="text-xs text-muted-foreground">Industrial Solutions</p>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/images/onetouch-logo.png" 
+              alt="OneTouch Industrial & Power Solutions" 
+              className="h-14 md:h-16 w-auto"
+            />
           </Link>
 
           {/* Desktop navigation */}

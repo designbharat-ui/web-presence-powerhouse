@@ -51,13 +51,11 @@ export function Footer() {
           {/* Company info */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center">
-                <span className="font-display text-2xl text-primary">OT</span>
-              </div>
-              <div>
-                <h2 className="font-display text-xl text-white">OneTouch</h2>
-                <p className="text-xs text-white/60">Industrial Solutions</p>
-              </div>
+              <img 
+                src="/images/onetouch-logo.png" 
+                alt="OneTouch Industrial & Power Solutions" 
+                className="h-16 w-auto"
+              />
             </Link>
             <p className="text-white/70 mb-6">
               ISO 9001:2015 certified company specializing in industrial solutions - elevators, building systems, and infrastructure projects. 
@@ -138,10 +136,21 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
-          <p>© 2024 OneTouch Industrial & Power Solutions. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          <p>© 2026 OneTouch Industrial & Power Solutions. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <Link to="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
+            <span className="text-white/40">|</span>
+            <span>
+              Site design & maintain by{" "}
+              <a 
+                href="https://wa.me/919871307796?text=Hello%20Bharat%2C%20I%20visited%20OneTouch%20Industrial%20Solutions%20website%20and%20would%20like%20to%20connect%20with%20you."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-primary-foreground underline transition-colors"
+              >
+                Bharat Arora
+              </a>
+            </span>
           </div>
         </div>
       </div>
