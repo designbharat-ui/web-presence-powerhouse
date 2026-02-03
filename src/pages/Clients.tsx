@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Quote, CheckCircle } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const clients = [
   "OTIS", "KONE", "Schindler", "ThyssenKrupp", "Mitsubishi", "Hitachi",
@@ -35,6 +36,7 @@ const Clients = () => {
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
+          <Breadcrumbs />
           <SectionHeader 
             eyebrow="Our Clients" 
             title="Trusted Partnerships" 

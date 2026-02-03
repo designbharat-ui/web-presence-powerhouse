@@ -22,6 +22,7 @@ import ScientificAgriculture from "./pages/services/ScientificAgriculture";
 import Projects from "./pages/Projects";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
+import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,8 +53,7 @@ const App = () => (
             <Route path="/projects" element={<Projects />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Building2, Gauge, Clock, MapPin } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const featuredProjects = [
   {
@@ -50,6 +51,7 @@ const Projects = () => {
       {/* Hero */}
       <section className="py-20 hero-gradient">
         <div className="container">
+          <Breadcrumbs />
           <SectionHeader 
             eyebrow="Our Projects" 
             title="Portfolio of Excellence" 
