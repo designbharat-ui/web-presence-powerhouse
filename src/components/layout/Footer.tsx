@@ -51,11 +51,13 @@ export function Footer() {
           {/* Company info */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img 
-                src="/images/onetouch-logo.png" 
-                alt="OneTouch Industrial & Power Solutions" 
-                className="h-16 w-auto"
-              />
+              <div className="bg-white rounded-xl p-3 shadow-lg">
+                <img 
+                  src="/images/onetouch-logo.png" 
+                  alt="OneTouch Industrial & Power Solutions" 
+                  className="h-20 w-auto"
+                />
+              </div>
             </Link>
             <p className="text-white/70 mb-6">
               ISO 9001:2015 certified company specializing in industrial solutions - elevators, building systems, and infrastructure projects. 

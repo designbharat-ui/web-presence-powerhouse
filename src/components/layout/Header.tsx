@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -37,7 +37,18 @@ const navigation = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
   const location = useLocation();
+
+  // Close mobile menu when route changes
+  React.useEffect(() => {
+    setMobileMenuOpen(false);
+    setExpandedMenu(null);
+  }, [location.pathname]);
+
+  const toggleSubmenu = (name: string) => {
+    setExpandedMenu(expandedMenu === name ? null : name);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -69,7 +80,7 @@ export function Header() {
             <img 
               src="/images/onetouch-logo.png" 
               alt="OneTouch Industrial & Power Solutions" 
-              className="h-14 md:h-16 w-auto"
+              className="h-16 md:h-20 w-auto"
             />
           </Link>
 
@@ -143,34 +154,57 @@ export function Header() {
 
         {/* Mobile navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-border/50 bg-background/95 backdrop-blur-lg">
+          <div className="lg:hidden border-t border-border/50 bg-background/95 backdrop-blur-lg max-h-[70vh] overflow-y-auto">
             <div className="container py-4 space-y-2">
               {navigation.map((item) => (
                 <div key={item.name}>
-                  <Link
-                    to={item.href}
-                    className={`block py-3 px-4 rounded-lg transition-colors ${
-                      location.pathname === item.href
-                        ? "bg-primary/10 text-primary"
-                        : "hover:bg-secondary text-foreground"
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.children && (
-                    <div className="pl-4 space-y-1 mt-1">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          to={child.href}
-                          className="block py-2 px-4 text-sm text-muted-foreground hover:text-primary transition-colors"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {child.name}
-                        </Link>
-                      ))}
-                    </div>
+                  {item.children ? (
+                    <>
+                      <button
+                        onClick={() => toggleSubmenu(item.name)}
+                        className={`w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors ${
+                          location.pathname.startsWith("/products") || location.pathname.startsWith("/services")
+                            ? "bg-primary/10 text-primary"
+                            : "hover:bg-secondary text-foreground"
+                        }`}
+                      >
+                        <span>{item.name}</span>
+                        <ChevronRight className={`h-4 w-4 transition-transform ${expandedMenu === item.name ? "rotate-90" : ""}`} />
+                      </button>
+                      {expandedMenu === item.name && (
+                        <div className="pl-4 space-y-1 mt-1 border-l-2 border-primary/20 ml-4">
+                          <Link
+                            to={item.href}
+                            className="block py-2 px-4 text-sm font-medium text-primary hover:bg-primary/10 rounded-lg transition-colors"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            All Products & Services
+                          </Link>
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              to={child.href}
+                              className="block py-2 px-4 text-sm text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded-lg transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`block py-3 px-4 rounded-lg transition-colors ${
+                        location.pathname === item.href
+                          ? "bg-primary/10 text-primary"
+                          : "hover:bg-secondary text-foreground"
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
                   )}
                 </div>
               ))}

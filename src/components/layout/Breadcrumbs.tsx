@@ -50,7 +50,7 @@ export function Breadcrumbs() {
   });
 
   return (
-    <Breadcrumb className="mb-6">
+    <Breadcrumb className="py-4">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
