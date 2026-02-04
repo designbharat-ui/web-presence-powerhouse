@@ -3,26 +3,27 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Link } from "react-router-dom";
 import { ArrowRight, Layers, Grid3X3, Monitor, Cog, HardHat, Wrench, DoorOpen, Settings, Building2, Leaf, FlaskConical } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const categories = [
-  { icon: Layers, title: "Designer SS 304 Sheets", description: "Premium stainless steel for lift cabins, escalator cladding, and architrave finishes.", href: "/products/ss-sheets", image: "/images/ss-sheet-1.jpg" },
-  { icon: Grid3X3, title: "Car Operating Panels", description: "Touch and push button panels with custom engraving and braille integration.", href: "/products/panels", image: "/images/panel-1.jpg" },
-  { icon: Monitor, title: "Multimedia Displays", description: "LCD/LED screens for in-car advertising and floor indicator integration.", href: "/products/displays", image: "/images/display-1.jpg" },
-  { icon: DoorOpen, title: "Entrances & Signage", description: "Lift entrances, architraves, do's & don'ts signage for safety.", href: "/products/entrances", image: "/images/entrance-1.jpg" },
-  { icon: Cog, title: "Spare Parts", description: "Complete range of elevator and escalator spare parts from trusted manufacturers.", href: "/products/spare-parts", image: "/images/spare-drive.jpg" },
-  { icon: HardHat, title: "Safety Equipment & PPE", description: "Full body harness, hard hats, safety shoes, and specialized PPE.", href: "/products/safety", image: "/images/safety-1.jpg" },
-  { icon: Wrench, title: "Industrial Tools", description: "Specialized elevator tools and testing equipment.", href: "/products/tools", image: "/images/tool-1.jpg" },
-  { icon: Settings, title: "Installation Services", description: "Expert installation with 30+ mechanics and project management.", href: "/services/installation", image: "/images/cabin-5.jpg" },
-  { icon: Building2, title: "Building & Cladding", description: "ACP, HPL, glass glazing, and tensile structure solutions.", href: "/services/building-systems", image: "/images/building-systems.jpg" },
-  { icon: Leaf, title: "Vertical Gardens", description: "Transform walls into beautiful living gardens for indoor/outdoor spaces.", href: "/services/vertical-gardens", image: "/images/vertical-transportation.jpg" },
-  { icon: FlaskConical, title: "Scientific & Agriculture", description: "Green houses, growth facilities, and prefabricated laboratories.", href: "/services/scientific-agriculture", image: "/images/scientific-agriculture.jpg" },
+  { icon: Layers, title: "Designer SS 304 Sheets", description: "Premium stainless steel for lift cabins, escalator cladding, and architrave finishes.", href: "/products/ss-sheets.html", image: "/images/ss-sheet-1.jpg" },
+  { icon: Grid3X3, title: "Car Operating Panels", description: "Touch and push button panels with custom engraving and braille integration.", href: "/products/panels.html", image: "/images/panel-1.jpg" },
+  { icon: Monitor, title: "Multimedia Displays", description: "LCD/LED screens for in-car advertising and floor indicator integration.", href: "/products/displays.html", image: "/images/display-1.jpg" },
+  { icon: DoorOpen, title: "Entrances & Signage", description: "Lift entrances, architraves, do's & don'ts signage for safety.", href: "/products/entrances.html", image: "/images/entrance-1.jpg" },
+  { icon: Cog, title: "Spare Parts", description: "Complete range of elevator and escalator spare parts from trusted manufacturers.", href: "/products/spare-parts.html", image: "/images/spare-drive.jpg" },
+  { icon: HardHat, title: "Safety Equipment & PPE", description: "Full body harness, hard hats, safety shoes, and specialized PPE.", href: "/products/safety.html", image: "/images/safety-1.jpg" },
+  { icon: Wrench, title: "Industrial Tools", description: "Specialized elevator tools and testing equipment.", href: "/products/tools.html", image: "/images/tool-1.jpg" },
+  { icon: Settings, title: "Installation Services", description: "Expert installation with 30+ mechanics and project management.", href: "/services/installation.html", image: "/images/cabin-5.jpg" },
+  { icon: Building2, title: "Building & Cladding", description: "ACP, HPL, glass glazing, and tensile structure solutions.", href: "/services/building-systems.html", image: "/images/building-systems.jpg" },
+  { icon: Leaf, title: "Vertical Gardens", description: "Transform walls into beautiful living gardens for indoor/outdoor spaces.", href: "/services/vertical-gardens.html", image: "/images/vertical-transportation.jpg" },
+  { icon: FlaskConical, title: "Scientific & Agriculture", description: "Green houses, growth facilities, and prefabricated laboratories.", href: "/services/scientific-agriculture.html", image: "/images/scientific-agriculture.jpg" },
 ];
 
 const Products = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/products"
+        canonicalUrl="/products.html"
         title="Products & Services"
         description="Complete elevator and escalator solutions - Designer SS 304 sheets, car operating panels, spare parts, multimedia displays, safety equipment, and installation services."
         keywords="elevator products, escalator parts, SS 304 sheets, car panels, spare parts, safety equipment, installation services, Delhi"
@@ -37,6 +38,11 @@ const Products = () => {
           />
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Categories Grid */}
       <section className="py-24">

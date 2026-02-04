@@ -4,27 +4,28 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Building2, Gauge, Clock, MapPin } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const featuredProjects = [
   {
     title: "Grand Théâtre de Rabat",
     description: "Morocco's iconic cultural landmark featuring 12 high-speed elevators with custom SS 304 gold finish. A showcase of precision engineering and aesthetic excellence.",
     image: "/images/project-1.jpg",
-    stats: { units: 12, speed: "6 mps", duration: "18 Months", type: "Infrastructure" },
-    features: ["Custom gold mirror finish", "High-speed 6 mps", "VIP elevator cabins", "Integrated multimedia"],
+    stats: { units: 12, speed: "High Speed", duration: "18 Months", type: "Infrastructure" },
+    features: ["Custom gold mirror finish", "High-speed operation", "VIP elevator cabins", "Integrated multimedia"],
   },
   {
     title: "Hotel Fermont Rabat",
     description: "Luxury hospitality project with 8 premium elevators featuring designer architraves and in-car multimedia displays for guest information.",
     image: "/images/cabin-3.jpg",
-    stats: { units: 8, speed: "4 mps", duration: "12 Months", type: "Hotel" },
+    stats: { units: 8, speed: "Premium", duration: "12 Months", type: "Hotel" },
     features: ["Designer architraves", "Multimedia displays", "Silent operation", "Custom branding"],
   },
   {
     title: "Hotel Tazi Palace",
     description: "Heritage integration project combining 6 elevators and 2 escalators while preserving the architectural character of this historic property.",
     image: "/images/cabin-6.jpg",
-    stats: { units: 8, speed: "3 mps", duration: "15 Months", type: "Hotel" },
+    stats: { units: 8, speed: "Standard", duration: "15 Months", type: "Hotel" },
     features: ["Heritage design integration", "6 elevators + 2 escalators", "Custom finishes", "Minimal visual impact"],
   },
 ];
@@ -42,7 +43,7 @@ const Projects = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/projects"
+        canonicalUrl="/projects.html"
         title="Our Projects"
         description="View our portfolio of successful elevator and escalator installations across India's prestigious buildings and infrastructure projects."
         keywords="elevator projects India, escalator installation, lift installation projects, commercial elevator, residential elevator"
@@ -57,6 +58,11 @@ const Projects = () => {
           />
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Featured Projects */}
       <section className="py-24">
@@ -78,7 +84,7 @@ const Projects = () => {
                     </div>
                     <div className="text-center p-3 rounded-lg bg-card border border-border">
                       <Gauge className="h-5 w-5 text-primary mx-auto mb-1" />
-                      <div className="font-display text-xl">{project.stats.speed}</div>
+                      <div className="font-display text-lg">{project.stats.speed}</div>
                       <p className="text-xs text-muted-foreground">Speed</p>
                     </div>
                     <div className="text-center p-3 rounded-lg bg-card border border-border">
@@ -138,8 +144,8 @@ const Projects = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join our portfolio of successful installations across India.
           </p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-gradient-gold text-primary-foreground">
+          <Link to="/contact.html">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Discuss Your Project <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

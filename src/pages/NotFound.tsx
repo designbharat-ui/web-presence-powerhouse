@@ -19,25 +19,26 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const allPages = [
-  { name: "Home", href: "/", icon: Home, description: "Return to homepage" },
-  { name: "About Us", href: "/about", icon: Building2, description: "Learn about our company" },
-  { name: "Products & Services", href: "/products", icon: Package, description: "View all products and services" },
-  { name: "SS 304 Sheets", href: "/products/ss-sheets", icon: Layers, description: "Stainless steel sheets" },
-  { name: "Car Operative Panels", href: "/products/panels", icon: Monitor, description: "Elevator control panels" },
-  { name: "Spare Parts", href: "/products/spare-parts", icon: Settings, description: "Elevator spare parts" },
-  { name: "Multimedia Displays", href: "/products/displays", icon: Monitor, description: "Digital display solutions" },
-  { name: "Safety Equipment", href: "/products/safety", icon: Shield, description: "Safety gear and equipment" },
-  { name: "Entrances & Architraves", href: "/products/entrances", icon: DoorOpen, description: "Elevator entrances" },
-  { name: "Tools & Equipment", href: "/products/tools", icon: Hammer, description: "Professional tools" },
-  { name: "Installation Services", href: "/services/installation", icon: Wrench, description: "Expert installation" },
-  { name: "Building & Cladding", href: "/services/building-systems", icon: Building2, description: "Building systems" },
-  { name: "Vertical Gardens", href: "/services/vertical-gardens", icon: Leaf, description: "Green wall solutions" },
-  { name: "Scientific & Agriculture", href: "/services/scientific-agriculture", icon: Leaf, description: "Scientific equipment" },
-  { name: "Our Projects", href: "/projects", icon: FolderOpen, description: "View our completed projects" },
-  { name: "Our Clients", href: "/clients", icon: Users, description: "Our valued clients" },
-  { name: "Contact Us", href: "/contact", icon: Phone, description: "Get in touch with us" },
+  { name: "Home", href: "/index.html", icon: Home, description: "Return to homepage" },
+  { name: "About Us", href: "/about.html", icon: Building2, description: "Learn about our company" },
+  { name: "Products & Services", href: "/products.html", icon: Package, description: "View all products and services" },
+  { name: "SS 304 Sheets", href: "/products/ss-sheets.html", icon: Layers, description: "Stainless steel sheets" },
+  { name: "Car Operative Panels", href: "/products/panels.html", icon: Monitor, description: "Elevator control panels" },
+  { name: "Spare Parts", href: "/products/spare-parts.html", icon: Settings, description: "Elevator spare parts" },
+  { name: "Multimedia Displays", href: "/products/displays.html", icon: Monitor, description: "Digital display solutions" },
+  { name: "Safety Equipment", href: "/products/safety.html", icon: Shield, description: "Safety gear and equipment" },
+  { name: "Entrances & Architraves", href: "/products/entrances.html", icon: DoorOpen, description: "Elevator entrances" },
+  { name: "Tools & Equipment", href: "/products/tools.html", icon: Hammer, description: "Professional tools" },
+  { name: "Installation Services", href: "/services/installation.html", icon: Wrench, description: "Expert installation" },
+  { name: "Building & Cladding", href: "/services/building-systems.html", icon: Building2, description: "Building systems" },
+  { name: "Vertical Gardens", href: "/services/vertical-gardens.html", icon: Leaf, description: "Green wall solutions" },
+  { name: "Scientific & Agriculture", href: "/services/scientific-agriculture.html", icon: Leaf, description: "Scientific equipment" },
+  { name: "Our Projects", href: "/projects.html", icon: FolderOpen, description: "View our completed projects" },
+  { name: "Our Clients", href: "/clients.html", icon: Users, description: "Our valued clients" },
+  { name: "Contact Us", href: "/contact.html", icon: Phone, description: "Get in touch with us" },
 ];
 
 const NotFound = () => {
@@ -49,9 +50,9 @@ const NotFound = () => {
 
   return (
     <Layout>
-      <div className="container py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
+      {/* Hero Section */}
+      <section className="py-12 hero-gradient">
+        <div className="container text-center">
           <h1 className="text-8xl md:text-9xl font-bold text-primary mb-4">404</h1>
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-foreground">
             Page Not Found
@@ -60,14 +61,21 @@ const NotFound = () => {
             The page you're looking for doesn't exist or has been moved. 
             Don't worry, here are all the pages you can explore:
           </p>
-          <Link to="/">
+          <Link to="/index.html">
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               <Home className="mr-2 h-5 w-5" />
               Back to Home
             </Button>
           </Link>
         </div>
+      </section>
 
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
+
+      <div className="container py-12">
         {/* All Pages Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {allPages.map((page) => (

@@ -5,18 +5,18 @@ import { Input } from "@/components/ui/input";
 
 const footerLinks = {
   products: [
-    { name: "SS 304 Sheets", href: "/products/ss-sheets" },
-    { name: "Car Operative Panels", href: "/products/panels" },
-    { name: "Spare Parts", href: "/products/spare-parts" },
-    { name: "Multimedia Displays", href: "/products/displays" },
-    { name: "Safety Equipment", href: "/products/safety" },
+    { name: "SS 304 Sheets", href: "/products/ss-sheets.html" },
+    { name: "Car Operative Panels", href: "/products/panels.html" },
+    { name: "Spare Parts", href: "/products/spare-parts.html" },
+    { name: "Multimedia Displays", href: "/products/displays.html" },
+    { name: "Safety Equipment", href: "/products/safety.html" },
   ],
   company: [
-    { name: "About Us", href: "/about" },
-    { name: "Our Projects", href: "/projects" },
-    { name: "Our Clients", href: "/clients" },
-    { name: "Installation Services", href: "/services/installation" },
-    { name: "Contact", href: "/contact" },
+    { name: "About Us", href: "/about.html" },
+    { name: "Our Projects", href: "/projects.html" },
+    { name: "Our Clients", href: "/clients.html" },
+    { name: "Installation Services", href: "/services/installation.html" },
+    { name: "Contact", href: "/contact.html" },
   ],
 };
 
@@ -50,14 +50,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company info */}
           <div>
-            <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="bg-white rounded-xl p-3 shadow-lg">
-                <img 
-                  src="/images/onetouch-logo.png" 
-                  alt="OneTouch Industrial & Power Solutions" 
-                  className="h-20 w-auto"
-                />
-              </div>
+            <Link to="/index.html" className="flex items-center gap-3 mb-6">
+              <img 
+                src="/images/onetouch-logo.png" 
+                alt="OneTouch Industrial & Power Solutions" 
+                className="h-24 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-white/70 mb-6">
               ISO 9001:2015 certified company specializing in industrial solutions - elevators, building systems, and infrastructure projects. 
@@ -140,7 +138,7 @@ export function Footer() {
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
           <p>© 2026 OneTouch Industrial & Power Solutions. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <Link to="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
+            <Link to="/sitemap.html" className="hover:text-white transition-colors">Sitemap</Link>
             <span className="text-white/40">|</span>
             <span>
               Site design & maintain by{" "}

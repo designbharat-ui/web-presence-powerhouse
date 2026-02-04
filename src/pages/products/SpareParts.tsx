@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 import { Search, ArrowRight, CheckCircle, Package } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const parts = [
   { image: "/images/spare-battery.jpg", name: "Batteries", desc: "Emergency light batteries for all brands" },
@@ -25,7 +26,7 @@ const SpareParts = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/products/spare-parts"
+        canonicalUrl="/products/spare-parts.html"
         title="Elevator & Escalator Spare Parts"
         description="Complete inventory of genuine and compatible spare parts for all major elevator and escalator brands. OTIS, KONE, Schindler, ThyssenKrupp, Mitsubishi, Hitachi."
         keywords="elevator spare parts, escalator spare parts, OTIS parts, KONE parts, Schindler parts, lift parts India, VVVF drives, elevator batteries"
@@ -47,6 +48,11 @@ const SpareParts = () => {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Brand Filter */}
       <section className="py-8 border-b border-border">
@@ -106,8 +112,8 @@ const SpareParts = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact">
-                <Button className="bg-gradient-gold text-primary-foreground">Request Bulk Quote</Button>
+              <Link to="/contact.html">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Request Bulk Quote</Button>
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">

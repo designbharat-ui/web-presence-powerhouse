@@ -12,6 +12,7 @@ import { Fragment } from "react";
 
 const routeNames: Record<string, string> = {
   "": "Home",
+  "index": "Home",
   "about": "About Us",
   "products": "Products & Services",
   "projects": "Our Projects",
@@ -34,15 +35,17 @@ const routeNames: Record<string, string> = {
 
 export function Breadcrumbs() {
   const location = useLocation();
-  const pathSegments = location.pathname.split("/").filter(Boolean);
+  // Remove .html extension for processing
+  const cleanPath = location.pathname.replace('.html', '');
+  const pathSegments = cleanPath.split("/").filter(Boolean);
 
   // Don't show breadcrumbs on home page
-  if (pathSegments.length === 0) {
+  if (pathSegments.length === 0 || (pathSegments.length === 1 && pathSegments[0] === 'index')) {
     return null;
   }
 
   const breadcrumbItems = pathSegments.map((segment, index) => {
-    const path = "/" + pathSegments.slice(0, index + 1).join("/");
+    const path = "/" + pathSegments.slice(0, index + 1).join("/") + ".html";
     const isLast = index === pathSegments.length - 1;
     const name = routeNames[segment] || segment.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
@@ -54,7 +57,7 @@ export function Breadcrumbs() {
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            <Link to="/" className="flex items-center gap-1">
+            <Link to="/index.html" className="flex items-center gap-1">
               <Home className="h-4 w-4" />
               <span className="sr-only md:not-sr-only">Home</span>
             </Link>

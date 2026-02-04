@@ -9,49 +9,49 @@ const products = [
     title: "Designer SS 304 Sheets",
     description: "Premium stainless steel sheets for lift cabins, escalator cladding, and architrave finishes with various patterns and textures.",
     image: "/images/ss-sheet-1.jpg",
-    href: "/products/ss-sheets",
+    href: "/products/ss-sheets.html",
   },
   {
     icon: Grid3X3,
     title: "Car Operating Panels",
     description: "Touch and push button panels with custom engraving, braille integration, and modern digital displays.",
     image: "/images/panel-1.jpg",
-    href: "/products/panels",
+    href: "/products/panels.html",
   },
   {
     icon: Monitor,
     title: "Multimedia Displays",
     description: "LCD/LED screens for in-car advertising, floor indicators, and digital signage solutions.",
     image: "/images/display-1.jpg",
-    href: "/products/displays",
+    href: "/products/displays.html",
   },
   {
     icon: DoorOpen,
     title: "Entrances & Signage",
     description: "Lift entrances, architraves, do's & don'ts signage, and custom safety signs.",
     image: "/images/entrance-1.jpg",
-    href: "/products/entrances",
+    href: "/products/entrances.html",
   },
   {
     icon: Cog,
     title: "Spare Parts",
     description: "Complete range of elevator and escalator spare parts from trusted OEM and compatible manufacturers.",
     image: "/images/spare-drive.jpg",
-    href: "/products/spare-parts",
+    href: "/products/spare-parts.html",
   },
   {
     icon: HardHat,
     title: "Safety Equipment",
     description: "Full body harness, hard hats, safety shoes, gloves, and specialized PPE for industrial work.",
     image: "/images/safety-1.jpg",
-    href: "/products/safety",
+    href: "/products/safety.html",
   },
   {
     icon: Wrench,
     title: "Industrial Tools",
     description: "Specialized elevator tools, testing equipment, and maintenance instruments.",
     image: "/images/tool-1.jpg",
-    href: "/products/tools",
+    href: "/products/tools.html",
   },
 ];
 
@@ -61,28 +61,28 @@ const services = [
     title: "Installation Services",
     description: "Expert elevator and escalator installation with 30+ mechanics and dedicated project management team.",
     image: "/images/cabin-5.jpg",
-    href: "/services/installation",
+    href: "/services/installation.html",
   },
   {
     icon: Building2,
     title: "Building & Cladding",
     description: "ACP, HPL, glass glazing, curtain walls, tensile structures, and complete facade solutions.",
     image: "/images/building-systems.jpg",
-    href: "/services/building-systems",
+    href: "/services/building-systems.html",
   },
   {
     icon: Leaf,
     title: "Vertical Gardens",
     description: "Transform walls into beautiful living gardens for indoor and outdoor spaces with low maintenance.",
     image: "/images/vertical-transportation.jpg",
-    href: "/services/vertical-gardens",
+    href: "/services/vertical-gardens.html",
   },
   {
     icon: FlaskConical,
     title: "Scientific & Agriculture",
     description: "Green houses, poly houses, growth facilities, and prefabricated modular laboratories.",
     image: "/images/scientific-agriculture.jpg",
-    href: "/services/scientific-agriculture",
+    href: "/services/scientific-agriculture.html",
   },
 ];
 
@@ -134,7 +134,7 @@ export function ProductsServicesSection() {
           </div>
 
           <div className="text-center mt-10">
-            <Link to="/products">
+            <Link to="/products.html">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 View All Products <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -188,7 +188,7 @@ export function ProductsServicesSection() {
           </div>
 
           <div className="text-center mt-10">
-            <Link to="/products">
+            <Link to="/products.html">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 View All Services <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

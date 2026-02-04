@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Download, CheckCircle } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const designs = [
   { image: "/images/cabin-1.jpg", name: "Gold Mirror Finish" },
@@ -37,7 +38,7 @@ const SSSheets = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/products/ss-sheets"
+        canonicalUrl="/products/ss-sheets.html"
         title="Designer SS 304 Sheets"
         description="Premium Grade 304 stainless steel sheets for lift cabins, escalator cladding, and architrave finishes. 20+ designer finishes available including gold mirror and custom etched patterns."
         keywords="SS 304 sheets, stainless steel elevator, lift cabin finish, designer SS sheets, gold mirror finish, escalator cladding, Delhi"
@@ -54,8 +55,8 @@ const SSSheets = () => {
                 Available in 20+ designer finishes including gold mirror, hairline, and custom etched patterns.
               </p>
               <div className="flex gap-4">
-                <Link to="/contact">
-                  <Button className="bg-gradient-gold text-primary-foreground">Request Quote</Button>
+                <Link to="/contact.html">
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Request Quote</Button>
                 </Link>
                 <Button variant="outline" className="border-primary/50">
                   <Download className="mr-2 h-4 w-4" /> Download Catalog
@@ -68,6 +69,11 @@ const SSSheets = () => {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Technical Specs */}
       <section className="py-24">
@@ -139,8 +145,8 @@ const SSSheets = () => {
         <div className="container text-center">
           <h2 className="font-display text-4xl mb-6">Need Custom Designs?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Upload your design specifications and we'll provide a custom quote.</p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-gradient-gold text-primary-foreground">
+          <Link to="/contact.html">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Get Custom Quote <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

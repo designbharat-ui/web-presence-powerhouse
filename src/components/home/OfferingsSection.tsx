@@ -7,37 +7,37 @@ const offerings = [
     title: "Designer SS 304 Sheets",
     description: "Premium stainless steel sheets for lift cabins, escalator cladding, and architrave finishes.",
     image: "/images/ss-sheet-1.jpg",
-    href: "/products/ss-sheets",
+    href: "/products/ss-sheets.html",
   },
   {
     title: "Car Operating Panels",
     description: "Touch and push button panels with custom engraving and braille integration.",
     image: "/images/panel-1.jpg",
-    href: "/products/panels",
+    href: "/products/panels.html",
   },
   {
     title: "Multimedia Displays",
     description: "LCD/LED screens for in-car advertising and floor indicator integration.",
     image: "/images/display-1.jpg",
-    href: "/products/displays",
+    href: "/products/displays.html",
   },
   {
     title: "Spare Parts",
     description: "Complete range of elevator and escalator spare parts from trusted manufacturers.",
     image: "/images/spare-drive.jpg",
-    href: "/products/spare-parts",
+    href: "/products/spare-parts.html",
   },
   {
     title: "Safety Equipment",
     description: "Full body harness, hard hats, safety shoes, and specialized PPE.",
     image: "/images/safety-1.jpg",
-    href: "/products/safety",
+    href: "/products/safety.html",
   },
   {
     title: "Installation Services",
     description: "Expert installation with 30+ mechanics and project management team.",
     image: "/images/cabin-5.jpg",
-    href: "/services/installation",
+    href: "/services/installation.html",
   },
 ];
 

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Leaf, Droplets, Wind, Sun, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const benefits = [
   {
@@ -47,7 +48,7 @@ export default function VerticalGardens() {
         title="Vertical Gardens | One Touch Industrial Solutions"
         description="Transform your indoor and outdoor walls into beautiful vertical gardens. Comprehensive solutions for living walls that improve air quality and aesthetics."
         keywords="vertical gardens, living walls, green walls, indoor plants, outdoor gardens, Delhi, India"
-        canonicalUrl="/services/vertical-gardens"
+        canonicalUrl="/services/vertical-gardens.html"
       />
 
       {/* Hero Section */}
@@ -64,7 +65,7 @@ export default function VerticalGardens() {
             <p className="text-xl text-primary-foreground/80 mb-8">
               We provide comprehensive solutions for converting your indoor/outdoor walls into beautiful gardens. We create Vertical Garden Art using plants to enhance the built environment and increase air quality.
             </p>
-            <Link to="/contact">
+            <Link to="/contact.html">
               <Button size="lg" className="bg-green-500 text-white hover:bg-green-600">
                 Start Your Garden Project
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -73,6 +74,11 @@ export default function VerticalGardens() {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Benefits Section */}
       <section className="py-20 section-gradient">
@@ -158,7 +164,7 @@ export default function VerticalGardens() {
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Contact us today for a free consultation on your vertical garden project.
           </p>
-          <Link to="/contact">
+          <Link to="/contact.html">
             <Button size="lg" className="bg-white text-green-700 hover:bg-white/90 font-semibold">
               Get Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />

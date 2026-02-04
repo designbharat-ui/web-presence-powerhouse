@@ -8,19 +8,19 @@ const projects = [
     title: "Grand Théâtre de Rabat",
     description: "12 high-speed elevators with custom SS 304 gold finish",
     image: "/images/project-1.jpg",
-    stats: { units: "12 Units", speed: "6 mps", duration: "18 Months" },
+    stats: { units: "12 Units", speed: "High Speed", duration: "18 Months" },
   },
   {
     title: "Hotel Fermont Rabat",
     description: "8 luxury elevators with designer architraves and multimedia displays",
     image: "/images/cabin-3.jpg",
-    stats: { units: "8 Units", speed: "4 mps", duration: "12 Months" },
+    stats: { units: "8 Units", speed: "Premium", duration: "12 Months" },
   },
   {
     title: "Hotel Tazi Palace",
     description: "6 elevators and 2 escalators with heritage integration",
     image: "/images/cabin-6.jpg",
-    stats: { units: "8 Units", speed: "3 mps", duration: "15 Months" },
+    stats: { units: "8 Units", speed: "Standard", duration: "15 Months" },
   },
 ];
 
@@ -31,7 +31,7 @@ export function ProjectsSection() {
         <SectionHeader
           eyebrow="Featured Projects"
           title="Our Landmark Installations"
-          description="Delivering excellence in Morocco's most prestigious buildings."
+          description="Delivering excellence in India's most prestigious buildings."
         />
 
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
@@ -75,7 +75,7 @@ export function ProjectsSection() {
         </div>
 
         <div className="text-center">
-          <Link to="/projects">
+          <Link to="/projects.html">
             <Button size="lg" variant="outline" className="border-primary/50">
               View All Projects
               <ArrowRight className="ml-2 h-5 w-5" />

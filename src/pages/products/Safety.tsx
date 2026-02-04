@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, CheckCircle } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const equipment = [
   { image: "/images/safety-1.jpg", name: "Safety Helmets", desc: "Hard hats with EN397 certification" },
@@ -29,7 +30,7 @@ const Safety = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/products/safety"
+        canonicalUrl="/products/safety.html"
         title="Safety Equipment & Tools"
         description="Complete range of PPE and industrial tools for elevator and escalator work. Safety helmets, harness, safety shoes, and specialized tools meeting EN81 standards."
         keywords="safety equipment, PPE, elevator safety, harness, safety helmet, industrial tools, elevator tools"
@@ -44,6 +45,11 @@ const Safety = () => {
           />
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* PPE Catalog */}
       <section className="py-24">
@@ -103,11 +109,11 @@ const Safety = () => {
                 ))}
               </ul>
             </div>
-            <div className="p-8 rounded-2xl bg-gradient-gold text-center">
+            <div className="p-8 rounded-2xl bg-primary text-center">
               <Shield className="h-20 w-20 mx-auto mb-6 text-primary-foreground" />
               <h3 className="font-display text-3xl mb-4 text-primary-foreground">Corporate Safety Kits</h3>
               <p className="text-primary-foreground/80 mb-6">Complete safety packages for your maintenance team at bulk pricing.</p>
-              <Link to="/contact">
+              <Link to="/contact.html">
                 <Button variant="secondary" size="lg">Get Bulk Quote</Button>
               </Link>
             </div>

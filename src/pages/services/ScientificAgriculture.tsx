@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Leaf, Thermometer, FlaskConical, Building, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const solutions = [
   {
@@ -64,7 +65,7 @@ export default function ScientificAgriculture() {
         title="Scientific & Agricultural Solutions | One Touch Industrial Solutions"
         description="Green houses, growth facilities, tissue culture labs, and porta cabins for scientific and agricultural applications. State of the art controlled environment solutions."
         keywords="green house, growth facility, tissue culture lab, porta cabin, prefab laboratory, Delhi, India"
-        canonicalUrl="/services/scientific-agriculture"
+        canonicalUrl="/services/scientific-agriculture.html"
       />
 
       {/* Hero Section */}
@@ -81,7 +82,7 @@ export default function ScientificAgriculture() {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Complete solutions for green houses, growth facilities, environmental controlled culture labs, and prefabricated laboratories with state of the art technology.
             </p>
-            <Link to="/contact">
+            <Link to="/contact.html">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 Explore Solutions
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -90,6 +91,11 @@ export default function ScientificAgriculture() {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Solutions Grid */}
       <section className="py-20 section-gradient">
@@ -160,7 +166,7 @@ export default function ScientificAgriculture() {
                   <p className="text-sm text-muted-foreground">Easily Movable/Shiftable</p>
                 </div>
               </div>
-              <Link to="/contact">
+              <Link to="/contact.html">
                 <Button className="bg-primary text-primary-foreground">
                   Get Custom Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -185,7 +191,7 @@ export default function ScientificAgriculture() {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Contact us for specialized solutions tailored to your scientific and agricultural needs.
           </p>
-          <Link to="/contact">
+          <Link to="/contact.html">
             <Button size="lg" variant="secondary" className="font-semibold">
               Contact Our Experts
               <ArrowRight className="ml-2 h-5 w-5" />
