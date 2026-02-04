@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Download, CheckCircle, Shield } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const panels = [
   { image: "/images/panel-1.jpg", name: "Touch Button Panel", type: "Modern LED backlight" },
@@ -28,7 +29,7 @@ const Panels = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/products/panels"
+        canonicalUrl="/products/panels.html"
         title="Car Operative Panels"
         description="Premium car operating panels with touch and push button options. Custom engraving, braille integration, and configurations for 2 to 64 floors."
         keywords="car operating panel, elevator panel, touch button panel, push button panel, braille panel, lift panel Delhi"
@@ -45,8 +46,8 @@ const Panels = () => {
                 braille integration, and configurations for 2 to 64 floors.
               </p>
               <div className="flex gap-4">
-                <Link to="/contact">
-                  <Button className="bg-gradient-gold text-primary-foreground">Request Quote</Button>
+                <Link to="/contact.html">
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Request Quote</Button>
                 </Link>
                 <Button variant="outline" className="border-primary/50">
                   <Download className="mr-2 h-4 w-4" /> CAD Drawings
@@ -60,6 +61,11 @@ const Panels = () => {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Features */}
       <section className="py-24">
@@ -100,13 +106,13 @@ const Panels = () => {
       {/* Warranty */}
       <section className="py-24">
         <div className="container">
-          <div className="rounded-2xl bg-gradient-gold p-12 text-center">
+          <div className="rounded-2xl bg-primary p-12 text-center">
             <Shield className="h-16 w-16 mx-auto mb-6 text-primary-foreground" />
             <h2 className="font-display text-4xl mb-4 text-primary-foreground">2 Year Warranty</h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
               All our car operative panels come with a standard 2-year warranty covering manufacturing defects and component failures.
             </p>
-            <Link to="/contact">
+            <Link to="/contact.html">
               <Button size="lg" variant="secondary">Contact Sales <ArrowRight className="ml-2 h-5 w-5" /></Button>
             </Link>
           </div>

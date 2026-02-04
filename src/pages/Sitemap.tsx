@@ -23,33 +23,33 @@ const sitemapData = [
   {
     title: "Main Pages",
     links: [
-      { name: "Home", href: "/", icon: Home },
-      { name: "About Us", href: "/about", icon: Building2 },
-      { name: "Products & Services", href: "/products", icon: Package },
-      { name: "Our Projects", href: "/projects", icon: FolderOpen },
-      { name: "Our Clients", href: "/clients", icon: Users },
-      { name: "Contact Us", href: "/contact", icon: Phone },
+      { name: "Home", href: "/index.html", icon: Home },
+      { name: "About Us", href: "/about.html", icon: Building2 },
+      { name: "Products & Services", href: "/products.html", icon: Package },
+      { name: "Our Projects", href: "/projects.html", icon: FolderOpen },
+      { name: "Our Clients", href: "/clients.html", icon: Users },
+      { name: "Contact Us", href: "/contact.html", icon: Phone },
     ]
   },
   {
     title: "Products",
     links: [
-      { name: "SS 304 Sheets", href: "/products/ss-sheets", icon: Layers },
-      { name: "Car Operative Panels", href: "/products/panels", icon: Monitor },
-      { name: "Spare Parts", href: "/products/spare-parts", icon: Settings },
-      { name: "Multimedia Displays", href: "/products/displays", icon: Monitor },
-      { name: "Safety Equipment", href: "/products/safety", icon: Shield },
-      { name: "Entrances & Architraves", href: "/products/entrances", icon: DoorOpen },
-      { name: "Tools & Equipment", href: "/products/tools", icon: Hammer },
+      { name: "SS 304 Sheets", href: "/products/ss-sheets.html", icon: Layers },
+      { name: "Car Operative Panels", href: "/products/panels.html", icon: Monitor },
+      { name: "Spare Parts", href: "/products/spare-parts.html", icon: Settings },
+      { name: "Multimedia Displays", href: "/products/displays.html", icon: Monitor },
+      { name: "Safety Equipment", href: "/products/safety.html", icon: Shield },
+      { name: "Entrances & Architraves", href: "/products/entrances.html", icon: DoorOpen },
+      { name: "Tools & Equipment", href: "/products/tools.html", icon: Hammer },
     ]
   },
   {
     title: "Services",
     links: [
-      { name: "Installation Services", href: "/services/installation", icon: Wrench },
-      { name: "Building & Cladding Systems", href: "/services/building-systems", icon: Building2 },
-      { name: "Vertical Gardens", href: "/services/vertical-gardens", icon: Leaf },
-      { name: "Scientific & Agriculture", href: "/services/scientific-agriculture", icon: Leaf },
+      { name: "Installation Services", href: "/services/installation.html", icon: Wrench },
+      { name: "Building & Cladding Systems", href: "/services/building-systems.html", icon: Building2 },
+      { name: "Vertical Gardens", href: "/services/vertical-gardens.html", icon: Leaf },
+      { name: "Scientific & Agriculture", href: "/services/scientific-agriculture.html", icon: Leaf },
     ]
   }
 ];
@@ -60,16 +60,24 @@ const Sitemap = () => {
       <SEOHead 
         title="Sitemap | OneTouch Industrial Solutions"
         description="Navigate through all pages of OneTouch Industrial Solutions website. Find products, services, and information easily."
-        canonicalUrl="/sitemap"
+        canonicalUrl="/sitemap.html"
       />
       
-      <div className="container py-12">
+      {/* Hero */}
+      <section className="py-12 hero-gradient">
+        <div className="container">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground">
+            Sitemap
+          </h1>
+        </div>
+      </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
         <Breadcrumbs />
-        
-        <h1 className="font-display text-4xl md:text-5xl font-bold mb-8 text-foreground">
-          Sitemap
-        </h1>
-        
+      </div>
+      
+      <div className="container py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sitemapData.map((section) => (
             <div key={section.title} className="bg-card rounded-xl p-6 shadow-sm border border-border">

@@ -28,7 +28,7 @@ export function CTASection() {
                 We'll help you find the perfect solution for your industrial and infrastructure needs.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/contact">
+                <Link to="/contact.html">
                   <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                     Request Free Quote
                     <ArrowRight className="ml-2 h-5 w-5" />

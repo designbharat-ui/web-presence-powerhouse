@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { DoorOpen, Shield, Cog, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const entranceTypes = [
   {
@@ -45,7 +46,7 @@ export default function Entrances() {
         title="Elevator Entrances & Architraves | One Touch Industrial Solutions"
         description="Premium elevator entrance solutions including architraves, safety barricades, and custom finishes. Quality entrance systems for all types of elevators."
         keywords="elevator entrances, architraves, safety barricades, elevator doors, Delhi, India"
-        canonicalUrl="/products/entrances"
+        canonicalUrl="/products/entrances.html"
       />
 
       {/* Hero Section */}
@@ -62,7 +63,7 @@ export default function Entrances() {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Complete solutions for elevator architraves, safety barricades, and custom entrance finishes. We provide art-of-class interiors for elevator cabins.
             </p>
-            <Link to="/contact">
+            <Link to="/contact.html">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 Get Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -71,6 +72,11 @@ export default function Entrances() {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Products Grid */}
       <section className="py-20 section-gradient">
@@ -121,7 +127,7 @@ export default function Entrances() {
                 ))}
               </div>
               <div className="mt-8">
-                <Link to="/contact">
+                <Link to="/contact.html">
                   <Button className="bg-primary text-primary-foreground">
                     Request Catalog
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -154,7 +160,7 @@ export default function Entrances() {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Contact us for custom architrave designs and entrance solutions.
           </p>
-          <Link to="/contact">
+          <Link to="/contact.html">
             <Button size="lg" variant="secondary" className="font-semibold">
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />

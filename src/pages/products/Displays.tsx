@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Monitor, Wifi, Cloud, DollarSign } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const displays = [
   { image: "/images/display-1.jpg", size: "7 inch", features: "Basic floor indicator" },
@@ -29,7 +30,7 @@ const Displays = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/products/displays"
+        canonicalUrl="/products/displays.html"
         title="Multimedia Displays"
         description="In-car digital screens and multimedia displays for elevators. Floor indicators, advertising screens with remote content management. 7 to 21 inch LCD/LED screens."
         keywords="elevator display, lift display, multimedia display, floor indicator, elevator advertising screen, digital signage"
@@ -46,8 +47,8 @@ const Displays = () => {
                 we offer complete solutions with remote content management.
               </p>
               <div className="flex gap-4">
-                <Link to="/contact">
-                  <Button className="bg-gradient-gold text-primary-foreground">Request Demo</Button>
+                <Link to="/contact.html">
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Request Demo</Button>
                 </Link>
               </div>
             </div>
@@ -58,6 +59,11 @@ const Displays = () => {
         </div>
       </section>
 
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
+
       {/* Features */}
       <section className="py-24">
         <div className="container">
@@ -65,7 +71,7 @@ const Displays = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature) => (
               <div key={feature.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all hover-lift text-center">
-                <div className="w-14 h-14 rounded-xl bg-gradient-gold flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="h-7 w-7 text-primary-foreground" />
                 </div>
                 <h4 className="font-display text-xl mb-2">{feature.title}</h4>
@@ -118,8 +124,8 @@ const Displays = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Contact us for a demonstration of our content management system and pricing.
           </p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-gradient-gold text-primary-foreground">
+          <Link to="/contact.html">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Schedule Demo <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

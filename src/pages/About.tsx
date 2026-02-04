@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Award, Shield, Users, Target, Lightbulb, Handshake, CheckCircle, ArrowRight } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const coreValues = [
   { icon: Shield, title: "Trust & Transparency", description: "We build lasting relationships through open communication and honest dealings." },
@@ -24,7 +25,7 @@ const About = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/about"
+        canonicalUrl="/about.html"
         title="About Us"
         description="One Touch Industrial Solutions - Building trust since 2017. ISO-certified company specializing in turnkey civil works, project management, and trading of industrial solutions in Delhi, India."
         keywords="about one touch, elevator company Delhi, industrial solutions India, ISO certified, elevator installation company"
@@ -41,10 +42,10 @@ const About = () => {
                 As an ISO-certified company, we specialize in turnkey civil works, project management, and trading of industrial solutions.
               </p>
               <div className="flex gap-4">
-                <Link to="/projects">
+                <Link to="/projects.html">
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90">View Our Projects</Button>
                 </Link>
-                <Link to="/contact">
+                <Link to="/contact.html">
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Contact Us</Button>
                 </Link>
               </div>
@@ -59,6 +60,11 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Mission & Vision */}
       <section className="py-24">
@@ -150,7 +156,7 @@ const About = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help elevate your next project.
           </p>
-          <Link to="/contact">
+          <Link to="/contact.html">
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

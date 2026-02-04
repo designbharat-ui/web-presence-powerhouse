@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, RotateCcw } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 interface FormErrors {
   name?: string;
@@ -76,7 +77,7 @@ const Contact = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/contact"
+        canonicalUrl="/contact.html"
         title="Contact Us"
         description="Contact One Touch Industrial Solutions for elevator and escalator solutions. Get a free consultation and quote. Located in Delhi, India."
         keywords="contact elevator company, elevator quote, escalator installation quote, Delhi elevator company, industrial solutions contact"
@@ -91,6 +92,11 @@ const Contact = () => {
           />
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Contact Info & Form */}
       <section className="py-24">
@@ -277,7 +283,7 @@ const Contact = () => {
                     <Button type="submit" size="lg" className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
                       <Send className="mr-2 h-5 w-5" /> Submit Quote Request
                     </Button>
-                    <Button type="button" size="lg" variant="outline" onClick={handleClear} className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Button type="button" size="lg" variant="outline" onClick={handleClear}>
                       <RotateCcw className="mr-2 h-5 w-5" /> Clear
                     </Button>
                   </div>

@@ -15,13 +15,15 @@ declare global {
   }
 }
 
+// English pinned at top, Hindi only Indian language, worldwide languages
 const languages = [
   { code: "en", name: "English", flag: "🇬🇧" },
   { code: "hi", name: "हिन्दी", flag: "🇮🇳" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
-  { code: "zh-CN", name: "中文", flag: "🇨🇳" },
+  { code: "zh-CN", name: "中文 (简体)", flag: "🇨🇳" },
+  { code: "zh-TW", name: "中文 (繁體)", flag: "🇹🇼" },
   { code: "ja", name: "日本語", flag: "🇯🇵" },
   { code: "ko", name: "한국어", flag: "🇰🇷" },
   { code: "ar", name: "العربية", flag: "🇸🇦" },
@@ -34,12 +36,17 @@ const languages = [
   { code: "th", name: "ไทย", flag: "🇹🇭" },
   { code: "id", name: "Bahasa Indonesia", flag: "🇮🇩" },
   { code: "ms", name: "Bahasa Melayu", flag: "🇲🇾" },
-  { code: "bn", name: "বাংলা", flag: "🇧🇩" },
-  { code: "ta", name: "தமிழ்", flag: "🇮🇳" },
-  { code: "te", name: "తెలుగు", flag: "🇮🇳" },
-  { code: "mr", name: "मराठी", flag: "🇮🇳" },
-  { code: "gu", name: "ગુજરાતી", flag: "🇮🇳" },
-  { code: "pa", name: "ਪੰਜਾਬੀ", flag: "🇮🇳" },
+  { code: "pl", name: "Polski", flag: "🇵🇱" },
+  { code: "uk", name: "Українська", flag: "🇺🇦" },
+  { code: "sv", name: "Svenska", flag: "🇸🇪" },
+  { code: "da", name: "Dansk", flag: "🇩🇰" },
+  { code: "no", name: "Norsk", flag: "🇳🇴" },
+  { code: "fi", name: "Suomi", flag: "🇫🇮" },
+  { code: "el", name: "Ελληνικά", flag: "🇬🇷" },
+  { code: "he", name: "עברית", flag: "🇮🇱" },
+  { code: "cs", name: "Čeština", flag: "🇨🇿" },
+  { code: "hu", name: "Magyar", flag: "🇭🇺" },
+  { code: "ro", name: "Română", flag: "🇷🇴" },
 ];
 
 export function LanguageSelector() {

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Building2, Layers, Grid3X3, Tent, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const services = [
   {
@@ -40,7 +41,7 @@ export default function BuildingSystems() {
         title="Building & Industrial Systems | One Touch Industrial Solutions"
         description="Complete building and industrial cladding solutions including HPL, ACP panels, glass glazing, and tensile structures. Professional facade solutions in Delhi, India."
         keywords="ACP panels, HPL panels, glass glazing, tensile structures, building facade, cladding solutions, Delhi, India"
-        canonicalUrl="/services/building-systems"
+        canonicalUrl="/services/building-systems.html"
       />
 
       {/* Hero Section */}
@@ -57,7 +58,7 @@ export default function BuildingSystems() {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Complete solutions for interior and exterior cladding including ACP, HPL, Glass façade, and stainless steel facade with wooden cladding options.
             </p>
-            <Link to="/contact">
+            <Link to="/contact.html">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -66,6 +67,11 @@ export default function BuildingSystems() {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Services Grid */}
       <section className="py-20 section-gradient">
@@ -104,41 +110,6 @@ export default function BuildingSystems() {
         </div>
       </section>
 
-      {/* Additional Services */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <SectionHeader
-            title="Additional Building Services"
-            description="Complete range of industrial and building solutions"
-            className="mb-12"
-          />
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                <Building2 className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="font-display text-xl mb-2">UPS Systems</h3>
-              <p className="text-muted-foreground text-sm">1 KVA - 800 KVA UPS systems for commercial and industrial use</p>
-            </Card>
-            <Card className="text-center p-8">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                <Layers className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="font-display text-xl mb-2">STP Plants</h3>
-              <p className="text-muted-foreground text-sm">Domestic and commercial STP plants with water treatment solutions</p>
-            </Card>
-            <Card className="text-center p-8">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                <Grid3X3 className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="font-display text-xl mb-2">SS Facades</h3>
-              <p className="text-muted-foreground text-sm">Stainless steel facade solutions for modern buildings</p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container text-center">
@@ -146,7 +117,7 @@ export default function BuildingSystems() {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Contact us for a free consultation and quote on your building cladding project.
           </p>
-          <Link to="/contact">
+          <Link to="/contact.html">
             <Button size="lg" variant="secondary" className="font-semibold">
               Request Free Quote
               <ArrowRight className="ml-2 h-5 w-5" />

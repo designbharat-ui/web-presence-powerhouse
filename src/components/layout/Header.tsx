@@ -11,28 +11,28 @@ import {
 import { LanguageSelector } from "./LanguageSelector";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
+  { name: "Home", href: "/index.html" },
+  { name: "About Us", href: "/about.html" },
   {
     name: "Products & Services",
-    href: "/products",
+    href: "/products.html",
     children: [
-      { name: "SS 304 Sheets", href: "/products/ss-sheets" },
-      { name: "Car Operative Panels", href: "/products/panels" },
-      { name: "Spare Parts", href: "/products/spare-parts" },
-      { name: "Multimedia Displays", href: "/products/displays" },
-      { name: "Safety Equipment", href: "/products/safety" },
-      { name: "Entrances & Architraves", href: "/products/entrances" },
-      { name: "Tools & Equipment", href: "/products/tools" },
-      { name: "Installation Services", href: "/services/installation" },
-      { name: "Building & Cladding", href: "/services/building-systems" },
-      { name: "Vertical Gardens", href: "/services/vertical-gardens" },
-      { name: "Scientific & Agriculture", href: "/services/scientific-agriculture" },
+      { name: "SS 304 Sheets", href: "/products/ss-sheets.html" },
+      { name: "Car Operative Panels", href: "/products/panels.html" },
+      { name: "Spare Parts", href: "/products/spare-parts.html" },
+      { name: "Multimedia Displays", href: "/products/displays.html" },
+      { name: "Safety Equipment", href: "/products/safety.html" },
+      { name: "Entrances & Architraves", href: "/products/entrances.html" },
+      { name: "Tools & Equipment", href: "/products/tools.html" },
+      { name: "Installation Services", href: "/services/installation.html" },
+      { name: "Building & Cladding", href: "/services/building-systems.html" },
+      { name: "Vertical Gardens", href: "/services/vertical-gardens.html" },
+      { name: "Scientific & Agriculture", href: "/services/scientific-agriculture.html" },
     ],
   },
-  { name: "Projects", href: "/projects" },
-  { name: "Clients", href: "/clients" },
-  { name: "Contact", href: "/contact" },
+  { name: "Projects", href: "/projects.html" },
+  { name: "Clients", href: "/clients.html" },
+  { name: "Contact", href: "/contact.html" },
 ];
 
 export function Header() {
@@ -48,6 +48,14 @@ export function Header() {
 
   const toggleSubmenu = (name: string) => {
     setExpandedMenu(expandedMenu === name ? null : name);
+  };
+
+  const isActive = (href: string) => {
+    return location.pathname === href || location.pathname === href.replace('.html', '');
+  };
+
+  const isProductOrServiceActive = () => {
+    return location.pathname.includes('/products') || location.pathname.includes('/services');
   };
 
   return (
@@ -76,7 +84,7 @@ export function Header() {
       <nav className="glass border-b border-border/50">
         <div className="container flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/index.html" className="flex items-center">
             <img 
               src="/images/onetouch-logo.png" 
               alt="OneTouch Industrial & Power Solutions" 
@@ -93,7 +101,7 @@ export function Header() {
                     <Button
                       variant="ghost"
                       className={`text-sm font-medium ${
-                        location.pathname.startsWith("/products") || location.pathname.startsWith("/services")
+                        isProductOrServiceActive()
                           ? "text-primary"
                           : "text-foreground"
                       }`}
@@ -122,7 +130,7 @@ export function Header() {
                   <Button
                     variant="ghost"
                     className={`text-sm font-medium ${
-                      location.pathname === item.href ? "text-primary" : "text-foreground"
+                      isActive(item.href) ? "text-primary" : "text-foreground"
                     }`}
                   >
                     {item.name}
@@ -134,7 +142,7 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link to="/contact">
+            <Link to="/contact.html">
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
                 Request Quote
               </Button>
@@ -163,7 +171,7 @@ export function Header() {
                       <button
                         onClick={() => toggleSubmenu(item.name)}
                         className={`w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors ${
-                          location.pathname.startsWith("/products") || location.pathname.startsWith("/services")
+                          isProductOrServiceActive()
                             ? "bg-primary/10 text-primary"
                             : "hover:bg-secondary text-foreground"
                         }`}
@@ -197,7 +205,7 @@ export function Header() {
                     <Link
                       to={item.href}
                       className={`block py-3 px-4 rounded-lg transition-colors ${
-                        location.pathname === item.href
+                        isActive(item.href)
                           ? "bg-primary/10 text-primary"
                           : "hover:bg-secondary text-foreground"
                       }`}
@@ -209,7 +217,7 @@ export function Header() {
                 </div>
               ))}
               <div className="pt-4">
-                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/contact.html" onClick={() => setMobileMenuOpen(false)}>
                   <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                     Request Quote
                   </Button>

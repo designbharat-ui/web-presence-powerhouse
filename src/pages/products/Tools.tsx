@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Wrench, Shield, HardHat, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const tools = [
   {
@@ -59,7 +60,7 @@ export default function Tools() {
         title="Professional Tools & Equipment | One Touch Industrial Solutions"
         description="Professional tools and equipment for elevator and escalator installation and maintenance. Authorized dealer of Aktion Safety Solutions."
         keywords="elevator tools, escalator tools, safety equipment, professional tools, Delhi, India"
-        canonicalUrl="/products/tools"
+        canonicalUrl="/products/tools.html"
       />
 
       {/* Hero Section */}
@@ -76,7 +77,7 @@ export default function Tools() {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Complete range of professional tools and safety equipment for elevator and escalator industry. Authorized dealer of Aktion Safety Solutions.
             </p>
-            <Link to="/contact">
+            <Link to="/contact.html">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 View Catalog
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -85,6 +86,11 @@ export default function Tools() {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumbs */}
+      <div className="container">
+        <Breadcrumbs />
+      </div>
 
       {/* Tools Grid */}
       <section className="py-20 section-gradient">
@@ -159,7 +165,7 @@ export default function Tools() {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Contact us for bulk orders and special pricing on professional tools and safety equipment.
           </p>
-          <Link to="/contact">
+          <Link to="/contact.html">
             <Button size="lg" variant="secondary" className="font-semibold">
               Request Quote
               <ArrowRight className="ml-2 h-5 w-5" />
