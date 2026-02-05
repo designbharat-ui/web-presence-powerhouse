@@ -26,9 +26,11 @@ const About = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/about.html"
-        title="About Us"
-        description="One Touch Industrial Solutions - Building trust since 2017. ISO-certified company specializing in turnkey civil works, project management, and trading of industrial solutions in Delhi, India."
-        keywords="about one touch, elevator company Delhi, industrial solutions India, ISO certified, elevator installation company"
+         title="About Us - 21+ Years of Elevator Excellence"
+         description="One Touch Industrial Solutions - Building trust since 2005. ISO 9001:2015 certified company with 30+ expert mechanics, 3000+ installations. Elevator and escalator specialists in Delhi, India."
+         keywords="about one touch, elevator company Delhi, industrial solutions India, ISO certified, elevator installation company, lift company Delhi"
+         pageType="AboutPage"
+         breadcrumbs={[{ name: "About Us", url: "/about.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">

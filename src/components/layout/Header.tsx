@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, ChevronDown, ChevronRight } from "lucide-react";
+ import { Menu, X, Phone, Mail, ChevronDown, ChevronRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -39,6 +39,15 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
   const location = useLocation();
+   const [isMobile, setIsMobile] = useState(false);
+ 
+   // Check if mobile
+   useEffect(() => {
+     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+     checkMobile();
+     window.addEventListener('resize', checkMobile);
+     return () => window.removeEventListener('resize', checkMobile);
+   }, []);
 
   // Close mobile menu when route changes
   React.useEffect(() => {
@@ -60,6 +69,32 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+       {/* Mobile Top Bar - Contact Info */}
+       {isMobile && (
+         <div className="bg-primary text-primary-foreground">
+           <div className="container py-2">
+             <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs">
+               <a href="tel:+919711312081" className="flex items-center gap-1 text-primary-foreground/90 hover:text-primary-foreground">
+                 <Phone className="h-3 w-3" />
+                 <span>+91 9711312081</span>
+               </a>
+               <span className="text-primary-foreground/40">|</span>
+               <a href="mailto:info@onetouchindustrialsolutions.com" className="flex items-center gap-1 text-primary-foreground/90 hover:text-primary-foreground">
+                 <Mail className="h-3 w-3" />
+                 <span>Email</span>
+               </a>
+               <span className="text-primary-foreground/40">|</span>
+               <span className="flex items-center gap-1 text-primary-foreground/90">
+                 <Award className="h-3 w-3" />
+                 <span>ISO 9001:2015</span>
+               </span>
+               <span className="text-primary-foreground/40">|</span>
+               <LanguageSelector />
+           </div>
+         </div>
+         </div>
+       )}
+ 
       {/* Top bar */}
       <div className="bg-primary text-primary-foreground hidden md:block">
         <div className="container flex justify-between items-center py-2 text-sm">

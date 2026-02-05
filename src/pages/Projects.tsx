@@ -3,29 +3,29 @@ import { SEOHead } from "@/components/seo/SEOHead";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Building2, Gauge, Clock, MapPin } from "lucide-react";
+ import { ArrowRight, Building2, Clock, MapPin } from "lucide-react";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 const featuredProjects = [
   {
     title: "Grand Théâtre de Rabat",
-    description: "Morocco's iconic cultural landmark featuring 12 high-speed elevators with custom SS 304 gold finish. A showcase of precision engineering and aesthetic excellence.",
+     description: "Morocco's iconic cultural landmark featuring 12 elevators with custom SS 304 gold finish. A showcase of precision engineering and aesthetic excellence.",
     image: "/images/project-1.jpg",
-    stats: { units: 12, speed: "High Speed", duration: "18 Months", type: "Infrastructure" },
-    features: ["Custom gold mirror finish", "High-speed operation", "VIP elevator cabins", "Integrated multimedia"],
+     stats: { units: 12, duration: "18 Months", type: "Infrastructure" },
+     features: ["Custom gold mirror finish", "VIP elevator cabins", "Integrated multimedia", "Advanced safety systems"],
   },
   {
     title: "Hotel Fermont Rabat",
-    description: "Luxury hospitality project with 8 premium elevators featuring designer architraves and in-car multimedia displays for guest information.",
+     description: "Luxury hospitality project with 8 elevators featuring designer architraves and in-car multimedia displays for guest information.",
     image: "/images/cabin-3.jpg",
-    stats: { units: 8, speed: "Premium", duration: "12 Months", type: "Hotel" },
+     stats: { units: 8, duration: "12 Months", type: "Hotel" },
     features: ["Designer architraves", "Multimedia displays", "Silent operation", "Custom branding"],
   },
   {
     title: "Hotel Tazi Palace",
     description: "Heritage integration project combining 6 elevators and 2 escalators while preserving the architectural character of this historic property.",
     image: "/images/cabin-6.jpg",
-    stats: { units: 8, speed: "Standard", duration: "15 Months", type: "Hotel" },
+     stats: { units: 8, duration: "15 Months", type: "Hotel" },
     features: ["Heritage design integration", "6 elevators + 2 escalators", "Custom finishes", "Minimal visual impact"],
   },
 ];
@@ -44,9 +44,11 @@ const Projects = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/projects.html"
-        title="Our Projects"
-        description="View our portfolio of successful elevator and escalator installations across India's prestigious buildings and infrastructure projects."
-        keywords="elevator projects India, escalator installation, lift installation projects, commercial elevator, residential elevator"
+         title="Our Projects - 3000+ Successful Installations"
+         description="View our portfolio of successful elevator and escalator installations. From Grand Théâtre de Rabat to M3M Smart World - 3000+ units installed across prestigious buildings."
+         keywords="elevator projects India, escalator installation portfolio, lift installation projects, commercial elevator projects, residential elevator Delhi"
+         pageType="CollectionPage"
+         breadcrumbs={[{ name: "Projects", url: "/projects.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">
@@ -76,16 +78,11 @@ const Projects = () => {
                   <h3 className="font-display text-4xl mb-4">{project.title}</h3>
                   <p className="text-muted-foreground text-lg mb-6">{project.description}</p>
                   
-                  <div className="grid grid-cols-4 gap-4 mb-6">
+                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="text-center p-3 rounded-lg bg-card border border-border">
                       <Building2 className="h-5 w-5 text-primary mx-auto mb-1" />
                       <div className="font-display text-xl">{project.stats.units}</div>
                       <p className="text-xs text-muted-foreground">Units</p>
-                    </div>
-                    <div className="text-center p-3 rounded-lg bg-card border border-border">
-                      <Gauge className="h-5 w-5 text-primary mx-auto mb-1" />
-                      <div className="font-display text-lg">{project.stats.speed}</div>
-                      <p className="text-xs text-muted-foreground">Speed</p>
                     </div>
                     <div className="text-center p-3 rounded-lg bg-card border border-border">
                       <Clock className="h-5 w-5 text-primary mx-auto mb-1" />

@@ -54,7 +54,7 @@ export function Footer() {
               <img 
                 src="/images/onetouch-logo.png" 
                 alt="OneTouch Industrial & Power Solutions" 
-                className="h-24 w-auto brightness-0 invert"
+               className="h-28 w-auto"
               />
             </Link>
             <p className="text-white/70 mb-6">

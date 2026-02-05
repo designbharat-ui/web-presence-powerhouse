@@ -43,10 +43,12 @@ export default function Entrances() {
   return (
     <Layout>
       <SEOHead
-        title="Elevator Entrances & Architraves | One Touch Industrial Solutions"
-        description="Premium elevator entrance solutions including architraves, safety barricades, and custom finishes. Quality entrance systems for all types of elevators."
-        keywords="elevator entrances, architraves, safety barricades, elevator doors, Delhi, India"
+         title="Entrances & Architraves - Premium Finishes"
+         description="Premium elevator entrance solutions - architraves, safety barricades, custom finishes. SS304, bronze, gold options. Professional installation across India."
+         keywords="elevator entrances Delhi, architraves India, safety barricades, elevator doors, SS304 entrance, custom finishes"
         canonicalUrl="/products/entrances.html"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Products", url: "/products.html" }, { name: "Entrances & Architraves", url: "/products/entrances.html" }]}
       />
 
       {/* Hero Section */}

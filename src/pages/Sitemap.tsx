@@ -58,9 +58,12 @@ const Sitemap = () => {
   return (
     <Layout>
       <SEOHead 
-        title="Sitemap | OneTouch Industrial Solutions"
-        description="Navigate through all pages of OneTouch Industrial Solutions website. Find products, services, and information easily."
+         title="Sitemap - Navigate Our Website"
+         description="Complete sitemap of OneTouch Industrial Solutions. Navigate all pages - products, services, projects, contacts. Find elevator solutions easily."
         canonicalUrl="/sitemap.html"
+         keywords="sitemap, website navigation, elevator products, escalator services, one touch industrial"
+         pageType="WebPage"
+         breadcrumbs={[{ name: "Sitemap", url: "/sitemap.html" }]}
       />
       
       {/* Hero */}

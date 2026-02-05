@@ -45,10 +45,12 @@ export default function VerticalGardens() {
   return (
     <Layout>
       <SEOHead
-        title="Vertical Gardens | One Touch Industrial Solutions"
-        description="Transform your indoor and outdoor walls into beautiful vertical gardens. Comprehensive solutions for living walls that improve air quality and aesthetics."
-        keywords="vertical gardens, living walls, green walls, indoor plants, outdoor gardens, Delhi, India"
+         title="Vertical Gardens - Green Wall Solutions"
+         description="Transform walls into beautiful living gardens. Indoor and outdoor vertical garden solutions. Improve air quality, reduce noise, enhance aesthetics. Professional installation."
+         keywords="vertical gardens Delhi, living walls India, green walls, indoor plants, outdoor gardens, sustainable building"
         canonicalUrl="/services/vertical-gardens.html"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Services", url: "/products.html" }, { name: "Vertical Gardens", url: "/services/vertical-gardens.html" }]}
       />
 
       {/* Hero Section */}

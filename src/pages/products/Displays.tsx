@@ -31,9 +31,11 @@ const Displays = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/products/displays.html"
-        title="Multimedia Displays"
-        description="In-car digital screens and multimedia displays for elevators. Floor indicators, advertising screens with remote content management. 7 to 21 inch LCD/LED screens."
-        keywords="elevator display, lift display, multimedia display, floor indicator, elevator advertising screen, digital signage"
+         title="Multimedia Displays - LCD & LED Screens"
+         description="In-car digital screens for elevators - 7 to 21 inch LCD/LED. Floor indicators, advertising screens with remote content management. Cloud-based CMS."
+         keywords="elevator display Delhi, lift LCD India, multimedia display, floor indicator, elevator advertising screen, digital signage"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Products", url: "/products.html" }, { name: "Multimedia Displays", url: "/products/displays.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">

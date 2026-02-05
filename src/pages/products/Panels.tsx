@@ -30,9 +30,11 @@ const Panels = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/products/panels.html"
-        title="Car Operative Panels"
-        description="Premium car operating panels with touch and push button options. Custom engraving, braille integration, and configurations for 2 to 64 floors."
-        keywords="car operating panel, elevator panel, touch button panel, push button panel, braille panel, lift panel Delhi"
+         title="Car Operative Panels - Touch & Push Button"
+         description="Car operating panels with touch and push button options. Custom engraving, braille integration, 2-64 floor configurations. ISO certified quality. Delhi."
+         keywords="car operating panel Delhi, elevator panel India, touch button panel, push button panel, braille panel, lift panel"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Products", url: "/products.html" }, { name: "Car Operative Panels", url: "/products/panels.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">

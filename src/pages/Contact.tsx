@@ -78,9 +78,11 @@ const Contact = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/contact.html"
-        title="Contact Us"
-        description="Contact One Touch Industrial Solutions for elevator and escalator solutions. Get a free consultation and quote. Located in Delhi, India."
-        keywords="contact elevator company, elevator quote, escalator installation quote, Delhi elevator company, industrial solutions contact"
+         title="Contact Us - Get Expert Consultation"
+         description="Contact One Touch Industrial Solutions for elevator products and installation quotes. Call +91 9711312081 or email us. Quick response within 24 hours. Delhi, India."
+         keywords="contact elevator company Delhi, elevator quote India, escalator installation quote, lift consultation, industrial solutions contact"
+         pageType="ContactPage"
+         breadcrumbs={[{ name: "Contact Us", url: "/contact.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">

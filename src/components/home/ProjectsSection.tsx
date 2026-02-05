@@ -1,26 +1,26 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Clock, Gauge } from "lucide-react";
-import { SectionHeader } from "@/components/ui/section-header";
+ import { Link } from "react-router-dom";
+ import { Button } from "@/components/ui/button";
+ import { ArrowRight, Building2, Clock } from "lucide-react";
+ import { SectionHeader } from "@/components/ui/section-header";
 
 const projects = [
   {
     title: "Grand Théâtre de Rabat",
-    description: "12 high-speed elevators with custom SS 304 gold finish",
+     description: "12 elevators with custom SS 304 gold finish",
     image: "/images/project-1.jpg",
-    stats: { units: "12 Units", speed: "High Speed", duration: "18 Months" },
+     stats: { units: "12 Units", duration: "18 Months" },
   },
   {
     title: "Hotel Fermont Rabat",
     description: "8 luxury elevators with designer architraves and multimedia displays",
     image: "/images/cabin-3.jpg",
-    stats: { units: "8 Units", speed: "Premium", duration: "12 Months" },
+     stats: { units: "8 Units", duration: "12 Months" },
   },
   {
     title: "Hotel Tazi Palace",
     description: "6 elevators and 2 escalators with heritage integration",
     image: "/images/cabin-6.jpg",
-    stats: { units: "8 Units", speed: "Standard", duration: "15 Months" },
+     stats: { units: "8 Units", duration: "15 Months" },
   },
 ];
 
@@ -55,14 +55,10 @@ export function ProjectsSection() {
                 <p className="text-muted-foreground mb-4">
                   {project.description}
                 </p>
-                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
+                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
                   <div className="text-center">
                     <Building2 className="h-5 w-5 text-primary mx-auto mb-1" />
                     <p className="text-sm font-medium">{project.stats.units}</p>
-                  </div>
-                  <div className="text-center">
-                    <Gauge className="h-5 w-5 text-primary mx-auto mb-1" />
-                    <p className="text-sm font-medium">{project.stats.speed}</p>
                   </div>
                   <div className="text-center">
                     <Clock className="h-5 w-5 text-primary mx-auto mb-1" />

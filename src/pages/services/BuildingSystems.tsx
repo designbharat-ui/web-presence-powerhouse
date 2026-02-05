@@ -38,10 +38,12 @@ export default function BuildingSystems() {
   return (
     <Layout>
       <SEOHead
-        title="Building & Industrial Systems | One Touch Industrial Solutions"
-        description="Complete building and industrial cladding solutions including HPL, ACP panels, glass glazing, and tensile structures. Professional facade solutions in Delhi, India."
-        keywords="ACP panels, HPL panels, glass glazing, tensile structures, building facade, cladding solutions, Delhi, India"
+         title="Building & Cladding Systems"
+         description="Building cladding solutions - HPL, ACP panels, glass glazing, tensile structures. Professional facade solutions. Quality materials, expert installation. Delhi, India."
+         keywords="ACP panels Delhi, HPL panels India, glass glazing, tensile structures, building facade, cladding solutions"
         canonicalUrl="/services/building-systems.html"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Services", url: "/products.html" }, { name: "Building & Cladding", url: "/services/building-systems.html" }]}
       />
 
       {/* Hero Section */}
