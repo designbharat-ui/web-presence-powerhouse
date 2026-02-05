@@ -57,10 +57,12 @@ export default function Tools() {
   return (
     <Layout>
       <SEOHead
-        title="Professional Tools & Equipment | One Touch Industrial Solutions"
-        description="Professional tools and equipment for elevator and escalator installation and maintenance. Authorized dealer of Aktion Safety Solutions."
-        keywords="elevator tools, escalator tools, safety equipment, professional tools, Delhi, India"
+         title="Tools & Equipment - Professional Grade"
+         description="Professional elevator and escalator tools - installation equipment, measuring instruments, power tools. Aktion Safety authorized dealer. Industrial grade quality."
+         keywords="elevator tools Delhi, escalator tools India, safety equipment, professional tools, maintenance equipment"
         canonicalUrl="/products/tools.html"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Products", url: "/products.html" }, { name: "Tools & Equipment", url: "/products/tools.html" }]}
       />
 
       {/* Hero Section */}

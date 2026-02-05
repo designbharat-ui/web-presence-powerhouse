@@ -1,44 +1,46 @@
-import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { Layout } from "@/components/layout/Layout";
-import { 
-  Home, 
-  Building2, 
-  Package, 
-  Users, 
-  Phone, 
-  Wrench,
-  Leaf,
-  Shield,
-  Monitor,
-  DoorOpen,
-  Hammer,
-  Layers,
-  Settings,
-  FolderOpen,
-  ArrowRight
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+ import { Link, useLocation } from "react-router-dom";
+ import { useEffect } from "react";
+ import { Layout } from "@/components/layout/Layout";
+ import { 
+   Home, 
+   Building2, 
+   Package, 
+   Users, 
+   Phone, 
+   Wrench,
+   Leaf,
+   Shield,
+   Monitor,
+   DoorOpen,
+   Hammer,
+   Layers,
+   Settings,
+   FolderOpen,
+   ArrowRight,
+   ExternalLink
+ } from "lucide-react";
+ import { Button } from "@/components/ui/button";
+ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+ import { SEOHead } from "@/components/seo/SEOHead";
 
 const allPages = [
-  { name: "Home", href: "/index.html", icon: Home, description: "Return to homepage" },
-  { name: "About Us", href: "/about.html", icon: Building2, description: "Learn about our company" },
-  { name: "Products & Services", href: "/products.html", icon: Package, description: "View all products and services" },
-  { name: "SS 304 Sheets", href: "/products/ss-sheets.html", icon: Layers, description: "Stainless steel sheets" },
-  { name: "Car Operative Panels", href: "/products/panels.html", icon: Monitor, description: "Elevator control panels" },
-  { name: "Spare Parts", href: "/products/spare-parts.html", icon: Settings, description: "Elevator spare parts" },
-  { name: "Multimedia Displays", href: "/products/displays.html", icon: Monitor, description: "Digital display solutions" },
-  { name: "Safety Equipment", href: "/products/safety.html", icon: Shield, description: "Safety gear and equipment" },
-  { name: "Entrances & Architraves", href: "/products/entrances.html", icon: DoorOpen, description: "Elevator entrances" },
-  { name: "Tools & Equipment", href: "/products/tools.html", icon: Hammer, description: "Professional tools" },
-  { name: "Installation Services", href: "/services/installation.html", icon: Wrench, description: "Expert installation" },
-  { name: "Building & Cladding", href: "/services/building-systems.html", icon: Building2, description: "Building systems" },
-  { name: "Vertical Gardens", href: "/services/vertical-gardens.html", icon: Leaf, description: "Green wall solutions" },
-  { name: "Scientific & Agriculture", href: "/services/scientific-agriculture.html", icon: Leaf, description: "Scientific equipment" },
-  { name: "Our Projects", href: "/projects.html", icon: FolderOpen, description: "View our completed projects" },
-  { name: "Our Clients", href: "/clients.html", icon: Users, description: "Our valued clients" },
-  { name: "Contact Us", href: "/contact.html", icon: Phone, description: "Get in touch with us" },
+   { name: "Home", href: "/index.html", icon: Home, description: "Return to our homepage and explore our complete elevator and escalator solutions." },
+   { name: "About Us", href: "/about.html", icon: Building2, description: "Learn about our 21+ years of experience in the elevator industry and ISO certification." },
+   { name: "Products & Services", href: "/products.html", icon: Package, description: "Browse our comprehensive range of elevator products and professional services." },
+   { name: "SS 304 Sheets", href: "/products/ss-sheets.html", icon: Layers, description: "Premium stainless steel sheets for lift cabins, escalator cladding, and architrave finishes." },
+   { name: "Car Operative Panels", href: "/products/panels.html", icon: Monitor, description: "Touch and push button panels with custom engraving and braille integration." },
+   { name: "Spare Parts", href: "/products/spare-parts.html", icon: Settings, description: "Complete range of elevator spare parts including motors, controllers, and safety devices." },
+   { name: "Multimedia Displays", href: "/products/displays.html", icon: Monitor, description: "LCD/LED screens for in-car advertising and floor indicator integration." },
+   { name: "Safety Equipment", href: "/products/safety.html", icon: Shield, description: "Comprehensive safety gear including harnesses, helmets, and rescue equipment." },
+   { name: "Entrances & Architraves", href: "/products/entrances.html", icon: DoorOpen, description: "Designer elevator entrances and architraves in various finishes and materials." },
+   { name: "Tools & Equipment", href: "/products/tools.html", icon: Hammer, description: "Professional tools and equipment for elevator installation and maintenance." },
+   { name: "Installation Services", href: "/services/installation.html", icon: Wrench, description: "Expert installation with 30+ mechanics and 3000+ units installed across India." },
+   { name: "Building & Cladding", href: "/services/building-systems.html", icon: Building2, description: "Building cladding, facade systems, and infrastructure solutions." },
+   { name: "Vertical Gardens", href: "/services/vertical-gardens.html", icon: Leaf, description: "Green wall solutions for sustainable building aesthetics." },
+   { name: "Scientific & Agriculture", href: "/services/scientific-agriculture.html", icon: Leaf, description: "Scientific and agricultural equipment solutions." },
+   { name: "Our Projects", href: "/projects.html", icon: FolderOpen, description: "View our portfolio of successful installations in prestigious buildings across India." },
+   { name: "Our Clients", href: "/clients.html", icon: Users, description: "Trusted by leading developers, hotels, and infrastructure companies." },
+   { name: "Contact Us", href: "/contact.html", icon: Phone, description: "Get in touch for quotes, inquiries, or technical support." },
 ];
 
 const NotFound = () => {
@@ -50,6 +52,11 @@ const NotFound = () => {
 
   return (
     <Layout>
+       <SEOHead 
+         title="Page Not Found"
+         description="The page you're looking for doesn't exist. Explore our complete range of elevator products, services, and solutions."
+         canonicalUrl="/404"
+       />
       {/* Hero Section */}
       <section className="py-12 hero-gradient">
         <div className="container text-center">
@@ -77,25 +84,29 @@ const NotFound = () => {
 
       <div className="container py-12">
         {/* All Pages Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+         <h2 className="font-display text-2xl mb-8 text-center">Explore Our Website</h2>
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {allPages.map((page) => (
             <Link
               key={page.href}
               to={page.href}
-              className="group bg-card rounded-xl p-5 shadow-sm border border-border hover:border-primary hover:shadow-md transition-all"
+               className="group bg-card rounded-2xl p-6 shadow-sm border border-border hover:border-primary hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <page.icon className="h-5 w-5" />
+               <div className="flex items-start gap-5">
+                 <div className="p-4 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
+                   <page.icon className="h-6 w-6" />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-2">
+                 <div className="flex-1">
+                   <h3 className="font-display text-lg text-foreground group-hover:text-primary transition-colors mb-2">
                     {page.name}
-                    <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </h3>
-                  <p className="text-sm text-muted-foreground truncate">
+                   <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
                     {page.description}
                   </p>
+                   <span className="inline-flex items-center gap-2 text-sm font-medium text-primary group-hover:underline">
+                     Learn More
+                     <ExternalLink className="h-4 w-4" />
+                   </span>
                 </div>
               </div>
             </Link>

@@ -27,9 +27,11 @@ const SpareParts = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/products/spare-parts.html"
-        title="Elevator & Escalator Spare Parts"
-        description="Complete inventory of genuine and compatible spare parts for all major elevator and escalator brands. OTIS, KONE, Schindler, ThyssenKrupp, Mitsubishi, Hitachi."
-        keywords="elevator spare parts, escalator spare parts, OTIS parts, KONE parts, Schindler parts, lift parts India, VVVF drives, elevator batteries"
+         title="Elevator Spare Parts - All Major Brands"
+         description="Genuine and compatible spare parts for OTIS, KONE, Schindler, ThyssenKrupp, Mitsubishi, Hitachi elevators. VVVF drives, batteries, sensors, governors. Fast delivery."
+         keywords="elevator spare parts Delhi, escalator parts India, OTIS parts, KONE parts, Schindler parts, VVVF drives, elevator batteries"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Products", url: "/products.html" }, { name: "Spare Parts", url: "/products/spare-parts.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">

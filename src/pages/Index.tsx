@@ -12,10 +12,11 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead 
-        canonicalUrl="/"
-        title="Premium Elevator & Escalator Solutions"
-        description="One Touch Industrial Solutions - Premium elevator and escalator solutions in Delhi, India. 21 years of expertise in designer SS sheets, car operating panels, spare parts, and complete installation services."
-        keywords="elevator solutions, escalator solutions, lift installation, SS 304 sheets, car operating panels, spare parts, Delhi, India, industrial solutions"
+         canonicalUrl="/index.html"
+         title="Elevator & Escalator Solutions Delhi"
+         description="One Touch Industrial Solutions - ISO 9001:2015 certified elevator company in Delhi. 21+ years expertise, 3000+ installations. SS sheets, panels, spare parts, installation services."
+         keywords="elevator solutions Delhi, escalator solutions India, lift installation, SS 304 sheets, car operating panels, spare parts, industrial solutions"
+         pageType="WebPage"
       />
       <HeroSection />
       <CoreValuesSection />

@@ -24,9 +24,11 @@ const Products = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/products.html"
-        title="Products & Services"
-        description="Complete elevator and escalator solutions - Designer SS 304 sheets, car operating panels, spare parts, multimedia displays, safety equipment, and installation services."
-        keywords="elevator products, escalator parts, SS 304 sheets, car panels, spare parts, safety equipment, installation services, Delhi"
+         title="Elevator Products & Services"
+         description="Complete elevator solutions - Designer SS 304 sheets, car operating panels, spare parts, multimedia displays, safety equipment, and professional installation services in India."
+         keywords="elevator products India, escalator parts Delhi, SS 304 sheets, car panels, spare parts, safety equipment, installation services"
+         pageType="CollectionPage"
+         breadcrumbs={[{ name: "Products & Services", url: "/products.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">

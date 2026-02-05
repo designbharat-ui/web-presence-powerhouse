@@ -29,9 +29,11 @@ const Clients = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/clients.html"
-        title="Our Clients & Partners"
-        description="Working with leading elevator manufacturers and real estate developers across India. View our trusted partnerships and client testimonials."
-        keywords="elevator clients India, escalator partners, OTIS, KONE, Schindler, ThyssenKrupp, real estate developers"
+         title="Our Clients & Partners"
+         description="Trusted by leading elevator manufacturers - OTIS, KONE, Schindler, ThyssenKrupp. Working with M3M, 3C Group, ACE developers across India. View our partnerships."
+         keywords="elevator clients India, escalator partners, OTIS partner, KONE dealer, Schindler supplier, ThyssenKrupp, real estate developers Delhi"
+         pageType="CollectionPage"
+         breadcrumbs={[{ name: "Clients", url: "/clients.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">

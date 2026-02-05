@@ -62,10 +62,12 @@ export default function ScientificAgriculture() {
   return (
     <Layout>
       <SEOHead
-        title="Scientific & Agricultural Solutions | One Touch Industrial Solutions"
-        description="Green houses, growth facilities, tissue culture labs, and porta cabins for scientific and agricultural applications. State of the art controlled environment solutions."
-        keywords="green house, growth facility, tissue culture lab, porta cabin, prefab laboratory, Delhi, India"
+         title="Scientific & Agriculture Solutions"
+         description="Greenhouses, growth facilities, tissue culture labs, portable cabins. State of the art biotechnology facilities with climate control. Professional installation."
+         keywords="greenhouses Delhi, growth facilities India, tissue culture labs, portable cabins, prefab labs, scientific equipment"
         canonicalUrl="/services/scientific-agriculture.html"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Services", url: "/products.html" }, { name: "Scientific & Agriculture", url: "/services/scientific-agriculture.html" }]}
       />
 
       {/* Hero Section */}

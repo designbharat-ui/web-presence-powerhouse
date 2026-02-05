@@ -26,9 +26,11 @@ const Installation = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/services/installation.html"
-        title="Installation Services"
-        description="Expert elevator and escalator installation with 21 years of experience and 3000+ units installed. From standard residential to high-speed infrastructure projects."
-        keywords="elevator installation, escalator installation, lift installation Delhi, high-speed elevator, infrastructure project, commercial elevator installation"
+         title="Installation Services - 3000+ Units Installed"
+         description="Expert elevator and escalator installation - 21 years experience, 3000+ units, 30+ mechanics. Residential, commercial, infrastructure projects. ISO certified quality."
+         keywords="elevator installation Delhi, escalator installation India, lift installation, commercial elevator, infrastructure project, residential elevator"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Services", url: "/products.html" }, { name: "Installation Services", url: "/services/installation.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">

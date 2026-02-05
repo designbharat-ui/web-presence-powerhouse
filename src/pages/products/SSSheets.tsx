@@ -39,9 +39,11 @@ const SSSheets = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/products/ss-sheets.html"
-        title="Designer SS 304 Sheets"
-        description="Premium Grade 304 stainless steel sheets for lift cabins, escalator cladding, and architrave finishes. 20+ designer finishes available including gold mirror and custom etched patterns."
-        keywords="SS 304 sheets, stainless steel elevator, lift cabin finish, designer SS sheets, gold mirror finish, escalator cladding, Delhi"
+         title="Designer SS 304 Sheets - Premium Finishes"
+         description="Premium Grade 304 stainless steel sheets for lift cabins, escalator cladding, architraves. 20+ designer finishes - gold mirror, hairline, etched patterns. Cut-to-size available."
+         keywords="SS 304 sheets Delhi, stainless steel elevator, lift cabin finish, designer SS sheets, gold mirror finish, escalator cladding India"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Products", url: "/products.html" }, { name: "SS 304 Sheets", url: "/products/ss-sheets.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">

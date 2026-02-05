@@ -31,9 +31,11 @@ const Safety = () => {
     <Layout>
       <SEOHead 
         canonicalUrl="/products/safety.html"
-        title="Safety Equipment & Tools"
-        description="Complete range of PPE and industrial tools for elevator and escalator work. Safety helmets, harness, safety shoes, and specialized tools meeting EN81 standards."
-        keywords="safety equipment, PPE, elevator safety, harness, safety helmet, industrial tools, elevator tools"
+         title="Safety Equipment & PPE - EN81 Certified"
+         description="PPE and industrial tools for elevator work - helmets, harness, safety shoes. EN81 and EN397 certified. Aktion Safety authorized dealer. Delhi, India."
+         keywords="safety equipment Delhi, PPE India, elevator safety, harness, safety helmet, industrial tools, EN81 certified"
+         pageType="ItemPage"
+         breadcrumbs={[{ name: "Products", url: "/products.html" }, { name: "Safety Equipment", url: "/products/safety.html" }]}
       />
       {/* Hero */}
       <section className="py-20 hero-gradient">
