@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { cn } from "@/lib/utils";
 
 declare global {
   interface Window {
@@ -49,12 +50,23 @@ const languages = [
   { code: "ro", name: "Română", flag: "🇷🇴" },
 ];
 
-export function LanguageSelector() {
+export type LanguageSelectorProps = {
+  triggerClassName?: string;
+  contentClassName?: string;
+  globeClassName?: string;
+};
+
+export function LanguageSelector({
+  triggerClassName,
+  contentClassName,
+  globeClassName,
+}: LanguageSelectorProps) {
   useEffect(() => {
     // Add Google Translate script
     const addScript = () => {
       const script = document.createElement("script");
-      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.src =
+        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
       script.async = true;
       document.body.appendChild(script);
     };
@@ -77,7 +89,9 @@ export function LanguageSelector() {
 
     return () => {
       // Cleanup
-      const script = document.querySelector('script[src*="translate.google.com"]');
+      const script = document.querySelector(
+        'script[src*="translate.google.com"]'
+      );
       if (script) {
         script.remove();
       }
@@ -86,7 +100,9 @@ export function LanguageSelector() {
 
   const handleLanguageChange = (langCode: string) => {
     // Find and trigger Google Translate
-    const selectElement = document.querySelector(".goog-te-combo") as HTMLSelectElement;
+    const selectElement = document.querySelector(
+      ".goog-te-combo"
+    ) as HTMLSelectElement;
     if (selectElement) {
       selectElement.value = langCode;
       selectElement.dispatchEvent(new Event("change"));
@@ -97,16 +113,27 @@ export function LanguageSelector() {
     <>
       {/* Hidden Google Translate Element */}
       <div id="google_translate_element" className="hidden" />
-      
+
       {/* Custom Language Selector */}
       <Select onValueChange={handleLanguageChange} defaultValue="en">
-        <SelectTrigger className="w-auto h-8 gap-2 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 text-xs">
-          <Globe className="h-3.5 w-3.5" />
+        <SelectTrigger
+          className={cn(
+            "w-auto h-8 gap-2 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 text-xs",
+            triggerClassName
+          )}
+        >
+          <Globe className={cn("h-3.5 w-3.5", globeClassName)} />
           <SelectValue placeholder="Language" />
         </SelectTrigger>
-        <SelectContent className="max-h-80 bg-background z-[100]">
+        <SelectContent
+          className={cn("max-h-80 bg-background z-[100]", contentClassName)}
+        >
           {languages.map((lang) => (
-            <SelectItem key={lang.code} value={lang.code} className="cursor-pointer">
+            <SelectItem
+              key={lang.code}
+              value={lang.code}
+              className="cursor-pointer"
+            >
               <span className="flex items-center gap-2">
                 <span>{lang.flag}</span>
                 <span>{lang.name}</span>
